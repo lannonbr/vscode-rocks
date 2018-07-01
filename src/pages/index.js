@@ -1,0 +1,82 @@
+import React from 'react'
+import get from 'lodash/get'
+import Helmet from 'react-helmet'
+import styled from 'styled-components'
+import PostPreview from '../components/PostPreview'
+
+const BlogContainer = styled.div`
+  p.topText {
+    text-align: center;
+    font-size: 26px;
+    line-height: 1.4;
+    padding: 0 40px;
+  }
+
+  @media (max-width: 700px) {
+    p.topText {
+      font-size: 18px;
+      padding: 0;
+    }
+  }
+
+  h2.thisMonth {
+    text-align: center;
+    margin: 60px 0 30px 0;
+    text-decoration-line: underline;
+  }
+`
+
+class BlogIndex extends React.Component {
+  render() {
+    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    const posts = get(this, 'props.data.allMarkdownRemark.edges')
+
+    return (
+      <BlogContainer>
+        <Helmet title={siteTitle} />
+        <p className="topText">
+          A place for weekly news on the newest features and updates to Visual
+          Studio Code as well as trending extensions and neat tricks to
+          continually improve your VS Code skills.
+        </p>
+        <h2 className="thisMonth">This Month in VS Code Weekly</h2>
+        {posts.map(({ node }) => {
+          return <PostPreview post={node} />
+        })}
+      </BlogContainer>
+    )
+  }
+}
+
+export default BlogIndex
+
+export const pageQuery = graphql`
+  query IndexQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            image {
+              childImageSharp {
+                sizes(maxWidth: 900) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`

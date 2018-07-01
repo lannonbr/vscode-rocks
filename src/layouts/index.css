@@ -1,0 +1,17 @@
+body {
+  background: #333;
+  color: white;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+header ul li {
+  font-size: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+header ul li a {
+  color: white;
+  text-decoration: none;
+  box-shadow: none;
+}
