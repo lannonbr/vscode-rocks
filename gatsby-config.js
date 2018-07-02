@@ -21,7 +21,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              backgroundColor: '#333',
+              maxWidth: 1000,
             },
           },
           'gatsby-plugin-styled-components',

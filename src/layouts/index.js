@@ -57,14 +57,8 @@ const Footer = () => (
   >
     <p>Posts released every monday at 8AM EST</p>
     <p>
-      Made with ❤️ by{' '}
-      <a style={{ color: 'inherit' }} href="https://lannonbr.com">
-        Benjamin Lannon
-      </a>{' '}
-      and hosted on{' '}
-      <a style={{ color: 'inherit' }} href="https://www.netlify.com/">
-        Netlify
-      </a>
+      Made with ❤️ by <a href="https://lannonbr.com">Benjamin Lannon</a> and
+      hosted on <a href="https://www.netlify.com/">Netlify</a>
     </p>
   </div>
 )
