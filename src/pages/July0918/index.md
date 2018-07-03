@@ -12,9 +12,9 @@ VS Code 1.25 was released last Friday. The biggest feature includes a grid layou
 
 As seen above, Grid Layouts have finally been brought to VS Code. Similar to how you used to drag a tab or file to the side of the editor to make a split pane, now you can do the same in both a vertical and horizontal layout to give a truly powerful editing experience. If you want to adjust the size of the editor panels which have been labelled Groups, grab onto the edge of a group and adjust it to how you see fit.
 
-As well in this month's update, the Typescript integrations now have been improved further. if you rename a folder in the explorer view, anywhere it is referenced through an import will also be renamed automatically.
+As well in this month's update, the Typescript integrations now have been improved further. if you rename a folder in the explorer view, anywhere it is referenced through an import will also be renamed automatically. Some other features for Windows and Linux users include a custom title bar which can match your theme similar to how MacOS behaves. This feature is currently in preview mode in the new release and can be enabled by setting `window.titleBarStyle` to `custom`.
 
-There is a bunch of new features, but I reccomend taking a look at the [Release Notes]() for the full listing. If you want to try these features before it is released at the beginning of every month, take a look at the insiders builds.
+There is a bunch of new features, but I reccomend taking a look at the [Release Notes](https://code.visualstudio.com/updates/v1_25) for the full listing. If you want to try these features before it is released at the beginning of every month, take a look at the insiders builds.
 
 # Community Spotlight: GitLens & Nord Theme
 
@@ -22,7 +22,7 @@ There is a bunch of new features, but I reccomend taking a look at the [Release 
 
 GitLens has become one of my go-to extensions I would reccomend to any VS Code user. As in the title, It's a tool which enhances the Git workflow experience in VS Code. The first few things that you can immediately see is on the current line, it displays some annotations on the last change to the line and by whom it was made by. If you hover over it, it expands to a preview showing those changes as well as more indepth information about the commit. If you want to learn more, visit [gitlens.amod.io](https://gitlens.amod.io/).
 
-As well, the current theme I've been using for the past few months which you can see above is Nord by Artic Ice Studio. It's a crisp blue theme with a low contrast that gives a cool look to Visual Studio Code. It has over 170k installs. If you want to try it out, search Nord in the extensions tab or on the VS Marketplace.
+As well, the current theme I've been using for the past few months which you can see above is Nord by Artic Ice Studio. It's a crisp blue theme with a low contrast that gives a cool look to Visual Studio Code. It has over 170k installs. If you want to try it out, search Nord in the extensions tab or on the VS Marketplace. I have done very small tweaks to the theme as I have a custom Title Bar color.
 
 # Quick Tips: File Traversal
 
@@ -34,4 +34,4 @@ By default, it will display a list of recently opened files, but it does a fuzzy
 
 # Thanks!
 
-This is first issue. Thank
+I have been using VS Code for the past few years and I always have been active in following what is up and coming in the community as well as the development of the editor itself. I started this project to share the knowledge I've learned over the years as well as a location to share what's next in Visual Studio Code.
