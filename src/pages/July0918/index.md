@@ -1,6 +1,6 @@
 ---
 title: "#1: Grid Layouts, GitLens, and Quick File Traversal"
-date: "2018-07-09T08:00"
+date: "2018-07-09T06:30"
 image: "./vscode-grids.png"
 ---
 

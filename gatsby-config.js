@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: 'VS Code Weekly',
     author: 'Benjamin Lannon',
-    description: 'A starter blog demonstrating what Gatsby can do.',
-    siteUrl: 'https://gatsbyjs.github.io/gatsby-starter-blog/',
+    description: "A weekly update to what's new and trending in VS Code",
+    siteUrl: 'https://vscode.rocks',
   },
   pathPrefix: '/',
   plugins: [
@@ -42,14 +42,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
     `gatsby-plugin-feed`,
-    `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
   ],
 }
