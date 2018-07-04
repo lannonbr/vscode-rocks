@@ -52,14 +52,10 @@ const Footer = () => (
   <div
     style={{
       textAlign: 'center',
-      marginTop: 40,
+      marginTop: 100,
     }}
   >
-    <p>Posts released every monday at 8AM EST</p>
-    <p>
-      Made with ❤️ by <a href="https://lannonbr.com">Benjamin Lannon</a> and
-      hosted on <a href="https://www.netlify.com/">Netlify</a>
-    </p>
+    <p>Posts released every monday at 6:30AM EST</p>
   </div>
 )
 
@@ -89,10 +85,10 @@ class Template extends React.Component {
           }}
         >
           <li>
-            <Link>Archive</Link>
+            <Link to="/archive">Archive</Link>
           </li>
           <li>
-            <Link>About</Link>
+            <Link to="/about">About</Link>
           </li>
         </ul>
       </Header>

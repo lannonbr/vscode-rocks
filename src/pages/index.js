@@ -2,6 +2,7 @@ import React from 'react'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
+import Link from 'gatsby-link'
 import PostPreview from '../components/PostPreview'
 
 const BlogContainer = styled.div`
@@ -43,6 +44,14 @@ class BlogIndex extends React.Component {
         {posts.map(({ node }) => {
           return <PostPreview post={node} />
         })}
+
+        <h2
+          style={{
+            textAlign: 'center',
+          }}
+        >
+          <Link to="/archive">Archive</Link>
+        </h2>
       </BlogContainer>
     )
   }
