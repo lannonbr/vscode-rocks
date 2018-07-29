@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import get from 'lodash/get'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
+import favicon from '../favicon.ico'
 
 const BlogPostContainer = styled.div`
   margin: 0 80px;
@@ -31,7 +32,10 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <BlogPostContainer>
-        <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
+        <Helmet
+          title={`${post.frontmatter.title} | ${siteTitle}`}
+          link={[{ rel: 'shortcut icon', href: `${favicon}` }]}
+        />
         <h1 style={{ textAlign: 'center' }}>{post.frontmatter.title}</h1>
         <p
           style={{

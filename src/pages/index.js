@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 import PostPreview from '../components/PostPreview'
+import favicon from '../favicon.ico'
 
 const BlogContainer = styled.div`
   p.topText {
@@ -34,7 +35,10 @@ class BlogIndex extends React.Component {
 
     return (
       <BlogContainer>
-        <Helmet title={siteTitle} />
+        <Helmet
+          title={siteTitle}
+          link={[{ rel: 'shortcut icon', href: `${favicon}` }]}
+        />
         <p className="topText">
           A place for weekly news on the newest features and updates to Visual
           Studio Code as well as trending extensions and neat tricks to
