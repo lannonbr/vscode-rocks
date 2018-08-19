@@ -34,6 +34,6 @@ By default, it will display a list of recently opened files, but it does a fuzzy
 
 I have been using VS Code for the past few years and I always have been active in following what is up and coming in the community as well as the development of the editor itself. I started this project to share the knowledge I've learned over the years as well as a location to share what's next in Visual Studio Code.
 
-As well, as I have been starting to develop extension for VS Code, I want to also give some resources to other devs to show the potential on how you can personally extend VS Code to how you wish.
+As well, I have been starting to develop extensions for VS Code and I want to also give some resources to other devs to show the potential on how you can personally extend VS Code to how you wish.
 
 Stay tuned!
