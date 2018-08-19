@@ -19,3 +19,8 @@ header ul li a {
   text-decoration: none;
   box-shadow: none;
 }
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

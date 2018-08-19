@@ -20,9 +20,9 @@ class About extends React.Component {
           continually improve the editing experience.
         </p>
         <p>
-          VS Code Weekly will be a weekly update on things going on in VS Code
-          as well as ways to enhance your productivity through quick tips and
-          extensions.
+          VS Code Rocks will be a weekly updated site on things going on in VS
+          Code as well as ways to enhance your productivity through quick tips
+          and extensions.
         </p>
       </AboutContainer>
     )

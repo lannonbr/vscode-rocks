@@ -44,7 +44,7 @@ class BlogIndex extends React.Component {
           Studio Code as well as trending extensions and neat tricks to
           continually improve your VS Code skills.
         </p>
-        <h2 className="thisMonth">This Month in VS Code Weekly</h2>
+        <h2 className="thisMonth">New Posts</h2>
         {posts.map(({ node }) => {
           return <PostPreview post={node} />
         })}
@@ -82,7 +82,7 @@ export const pageQuery = graphql`
             title
             image {
               childImageSharp {
-                sizes(maxWidth: 900) {
+                sizes(maxWidth: 2000) {
                   ...GatsbyImageSharpSizes
                 }
               }

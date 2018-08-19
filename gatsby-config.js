@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'VS Code Weekly',
+    title: 'VS Code Rocks',
     author: 'Benjamin Lannon',
     description: "A weekly update to what's new and trending in VS Code",
     siteUrl: 'https://vscode.rocks',

@@ -17,6 +17,7 @@ const Header = styled.header`
     flex: 1;
     align-items: center;
     margin-top: 0;
+    width: 100%;
   }
 
   img {
@@ -37,27 +38,17 @@ const Header = styled.header`
     }
 
     h1 {
-      font-size: 20px;
+      font-size: 28px;
+      justify-content: center;
     }
 
     ul li {
-      font-size: 16px;
+      font-size: 18px;
       margin-left: 20px;
       margin-right: 20px;
     }
   }
 `
-
-const Footer = () => (
-  <div
-    style={{
-      textAlign: 'center',
-      marginTop: 100,
-    }}
-  >
-    <p>Posts released every monday at 6:30AM EST</p>
-  </div>
-)
 
 class Template extends React.Component {
   render() {
@@ -74,7 +65,7 @@ class Template extends React.Component {
             }}
             to={'/'}
           >
-            VS Code Weekly
+            VS Code Rocks
           </Link>
         </h1>
         <ul
@@ -105,7 +96,6 @@ class Template extends React.Component {
       >
         {header}
         {children()}
-        <Footer />
       </div>
     )
   }
