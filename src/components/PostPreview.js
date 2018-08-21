@@ -48,6 +48,7 @@ class PostPreview extends React.Component {
       <PostPreviewContainer>
         <Link className="prevImg" to={this.props.post.fields.slug}>
           <Img
+            alt={title}
             sizes={this.props.post.frontmatter.image.childImageSharp.sizes}
           />
         </Link>
