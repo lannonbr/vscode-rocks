@@ -3,6 +3,7 @@ import get from 'lodash/get'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
+import moment from 'moment'
 
 const PostPreviewContainer = styled.div`
   display: flex;
@@ -44,6 +45,8 @@ class PostPreview extends React.Component {
   render() {
     const title = get(this.props.post, 'frontmatter.title')
 
+    let dateTime = moment(this.props.post.frontmatter.date).format("YYYY-MM-DD");
+
     return (
       <PostPreviewContainer>
         <Link className="prevImg" to={this.props.post.fields.slug}>
@@ -56,7 +59,7 @@ class PostPreview extends React.Component {
           <Link to={this.props.post.fields.slug}>
             <h2>{title}</h2>
           </Link>
-          <time>{this.props.post.frontmatter.date}</time>
+          <time dateTime={dateTime}>{this.props.post.frontmatter.date}</time>
           <p dangerouslySetInnerHTML={{ __html: this.props.post.excerpt }} />
           <Link to={this.props.post.fields.slug}>View More</Link>
         </div>
