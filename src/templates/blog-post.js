@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import get from 'lodash/get'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
+import moment from 'moment'
 import favicon from '../favicon.ico'
 
 const BlogPostContainer = styled.div`
@@ -30,6 +31,8 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
 
+    const dateTime = moment(post.frontmatter.date).format('YYYY-MM-DD')
+
     return (
       <BlogPostContainer>
         <Helmet
@@ -37,15 +40,17 @@ class BlogPostTemplate extends React.Component {
           link={[{ rel: 'shortcut icon', href: `${favicon}` }]}
         />
         <h1 style={{ textAlign: 'center' }}>{post.frontmatter.title}</h1>
-        <p
+        <time
+          dateTime={dateTime}
           style={{
             display: 'block',
             textAlign: 'center',
           }}
         >
           {post.frontmatter.date}
-        </p>
+        </time>
         <Img
+          alt="Blog post header image"
           className="topImg"
           sizes={post.frontmatter.image.childImageSharp.sizes}
         />
