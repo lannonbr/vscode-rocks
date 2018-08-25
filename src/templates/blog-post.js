@@ -23,6 +23,14 @@ const BlogPostContainer = styled.div`
       margin: 0;
     }
   }
+
+  article {
+    img {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
 `
 
 class BlogPostTemplate extends React.Component {
@@ -49,7 +57,7 @@ class BlogPostTemplate extends React.Component {
           className="topImg"
           sizes={post.frontmatter.image.childImageSharp.sizes}
         />
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <article dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr style={{}} />
       </BlogPostContainer>
     )
