@@ -26,9 +26,7 @@ const BlogPostContainer = styled.div`
 
   article {
     img {
-      width: 100%;
-      max-width: 600px;
-      margin: 0 auto;
+      max-width: 100%;
     }
   }
 `
