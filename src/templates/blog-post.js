@@ -28,6 +28,11 @@ const BlogPostContainer = styled.div`
     img {
       max-width: 100%;
     }
+
+    img[src$='.gif'] {
+      display: block;
+      margin: 0 auto;
+    }
   }
 `
 
