@@ -49,7 +49,7 @@ class PostPreview extends React.Component {
   render() {
     const title = get(this.props.post, 'frontmatter.title')
 
-    let dateTime = moment(this.props.post.frontmatter.date).format("YYYY-MM-DD");
+    let dateTime = moment(this.props.post.frontmatter.date).format('YYYY-MM-DD')
 
     return (
       <article>
@@ -60,25 +60,17 @@ class PostPreview extends React.Component {
               sizes={this.props.post.frontmatter.image.childImageSharp.sizes}
             />
           </Link>
-<<<<<<< HEAD
           <div>
             <Link to={this.props.post.fields.slug}>
               <h2>{title}</h2>
             </Link>
-            <time>{this.props.post.frontmatter.date}</time>
+            <time dateTime={dateTime}>{this.props.post.frontmatter.date}</time>
             <p dangerouslySetInnerHTML={{ __html: this.props.post.excerpt }} />
             <Link to={this.props.post.fields.slug}>View More</Link>
           </div>
         </PostPreviewContainer>
         <hr style={{ color: '#777', marginTop: 20 }} />
       </article>
-=======
-          <time dateTime={dateTime}>{this.props.post.frontmatter.date}</time>
-          <p dangerouslySetInnerHTML={{ __html: this.props.post.excerpt }} />
-          <Link to={this.props.post.fields.slug}>View More</Link>
-        </div>
-      </PostPreviewContainer>
->>>>>>> 1db532414594cf97ffe234e936f48ffc5d8ed650
     )
   }
 }
