@@ -57,6 +57,9 @@ class BlogPostTemplate extends React.Component {
         />
         <article dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr style={{}} />
+        <p style={{ textAlign: 'center' }}>
+          Stay tuned to the next issue, next Sunday
+        </p>
       </BlogPostContainer>
     )
   }

@@ -37,6 +37,10 @@ const PostPreviewContainer = styled.div`
   @media (max-width: 700px) {
     margin: 0 20px;
     flex-direction: column;
+
+    h2 {
+      margin-top: 20px;
+    }
   }
 `
 
@@ -45,22 +49,25 @@ class PostPreview extends React.Component {
     const title = get(this.props.post, 'frontmatter.title')
 
     return (
-      <PostPreviewContainer>
-        <Link className="prevImg" to={this.props.post.fields.slug}>
-          <Img
-            alt={title}
-            sizes={this.props.post.frontmatter.image.childImageSharp.sizes}
-          />
-        </Link>
-        <div>
-          <Link to={this.props.post.fields.slug}>
-            <h2>{title}</h2>
+      <article>
+        <PostPreviewContainer>
+          <Link className="prevImg" to={this.props.post.fields.slug}>
+            <Img
+              alt={title}
+              sizes={this.props.post.frontmatter.image.childImageSharp.sizes}
+            />
           </Link>
-          <time>{this.props.post.frontmatter.date}</time>
-          <p dangerouslySetInnerHTML={{ __html: this.props.post.excerpt }} />
-          <Link to={this.props.post.fields.slug}>View More</Link>
-        </div>
-      </PostPreviewContainer>
+          <div>
+            <Link to={this.props.post.fields.slug}>
+              <h2>{title}</h2>
+            </Link>
+            <time>{this.props.post.frontmatter.date}</time>
+            <p dangerouslySetInnerHTML={{ __html: this.props.post.excerpt }} />
+            <Link to={this.props.post.fields.slug}>View More</Link>
+          </div>
+        </PostPreviewContainer>
+        <hr style={{ color: '#777', marginTop: 20 }} />
+      </article>
     )
   }
 }

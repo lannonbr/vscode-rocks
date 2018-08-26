@@ -14,6 +14,12 @@ const BlogContainer = styled.div`
     padding: 0 40px;
   }
 
+  article:last-of-type {
+    hr {
+      display: none;
+    }
+  }
+
   @media (max-width: 700px) {
     p.topText {
       font-size: 18px;
