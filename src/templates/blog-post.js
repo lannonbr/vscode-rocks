@@ -24,6 +24,17 @@ const BlogPostContainer = styled.div`
       margin: 0;
     }
   }
+
+  article {
+    img {
+      max-width: 100%;
+    }
+
+    img[src$='.gif'] {
+      display: block;
+      margin: 0 auto;
+    }
+  }
 `
 
 class BlogPostTemplate extends React.Component {
@@ -54,8 +65,11 @@ class BlogPostTemplate extends React.Component {
           className="topImg"
           sizes={post.frontmatter.image.childImageSharp.sizes}
         />
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <article dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr style={{}} />
+        <p style={{ textAlign: 'center' }}>
+          Stay tuned to the next issue, next Sunday
+        </p>
       </BlogPostContainer>
     )
   }
