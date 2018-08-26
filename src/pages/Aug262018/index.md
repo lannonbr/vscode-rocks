@@ -18,7 +18,7 @@ Do note if you still prefer the JSON format, it is not going away and you can ea
 
 ---
 
-As well, another feature that is upcoming is the option to write OS-specific keybindings. As developers, it may be possible to be working across Windows, MacOS, and Linux and the ability to define custom keyboard shortcuts that may use OS specific keys (alt vs option, super / cmd / windows, etc).
+As well, another feature that is upcoming is the option to write OS-specific keybindings. As developers, it may be possible to be working across Windows, MacOS, and Linux and the ability to define custom keyboard shortcuts that may use OS specific keys (alt vs option, super / cmd / windows, etc) and to be able to write keybindings for each OS will allow transferring the keybindings files across systems much easier.
 
 ![custom OS-specific keybindings](keybindings.png)
 
@@ -26,7 +26,7 @@ as seen on the right side of the editor in the `keybindings.json` file, you can 
 
 ---
 
-If you want to test these features or just dig into the nightly build of VS Code and see what is coming, head over to the VS Code Website to the [Download VS Code Insiders](https://code.visualstudio.com/insiders/) page. As well, if you are interested in seeing a list of features that are planned for each release, the VS Code team has public [Iteration Plans](https://github.com/Microsoft/vscode/wiki/Iteration-Plans) on the VS Code github wiki
+If you want to test these features or just dig into the nightly build of VS Code and see what is coming, head over to the VS Code Website to the [Download VS Code Insiders](https://code.visualstudio.com/insiders/) page. As well, if you are interested in seeing a list of features that are planned for each release, the VS Code team has public [Iteration Plans](https://github.com/Microsoft/vscode/wiki/Iteration-Plans) on the VS Code GitHub wiki.
 
 # Community Spotlight: Clock in Status Bar and Auto Rename Tag
 
@@ -42,4 +42,25 @@ The second extension we are looking at is [Auto Rename Tag](https://marketplace.
 
 # Quick Tip: Writing User Snippets
 
-paragraph
+In VS Code, you can write snippets of code through both global snippets or language specific code. If you open the cog in the bottom left section and click User Snippets. then you choose a language which you want to use. A json file will open up and here is an example for inserting a copyright notice into any file.
+
+```json
+{
+  "Copyright": {
+    "scope": "plaintext,html",
+    "prefix": "copy",
+    "description": "Copyright Notice",
+    "body": "Copyright $1 Benjamin Lannon. All Rights Reserved"
+  }
+}
+```
+
+If you want to declare languages in a global snippets file, the property `scope` is a comma seperated list of language identifiers you want to use. `prefix` is the shorthand you will type before running such, and `body` is either a single string or an array of strings for each line of the snippet. If you want to put places to insert the cursor, you can insert symbols including a $ followed by a number and if you want a default placeholder you can insert as follows: `${1:placeholder}` instead of `$1`.
+
+Now you can finally open up a file and go ahead and insert the snippet:
+
+![Snippets gif](Snippet.gif)
+
+If you find typing something quite often in VS Code, increase your productivity and make a snippet of it.
+
+That's it for this week. If there's anything you are interested in seeing in future issues, tweet at me at [@lannonbr](https://twitter.com/lannonbr).
