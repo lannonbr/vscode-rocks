@@ -37,7 +37,7 @@ const BlogContainer = styled.div`
 class BlogIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const posts = get(this, 'props.data.allMarkdownRemark.edges')
+    const posts = get(this, 'props.data.allMarkdownRemark.edges').slice(0, 5) // Grab 5 newest posts
 
     return (
       <BlogContainer>
@@ -52,7 +52,7 @@ class BlogIndex extends React.Component {
         </p>
         <h2 className="thisMonth">New Posts</h2>
         {posts.map(({ node }) => {
-          return <PostPreview post={node} />
+          return <PostPreview key={node.fields.slug} post={node} />
         })}
 
         <h2
