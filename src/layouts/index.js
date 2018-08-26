@@ -56,7 +56,7 @@ class Template extends React.Component {
     let header = (
       <Header>
         <h1>
-          <img src={vscodeIcon} />
+          <img alt="VS Code Logo" src={vscodeIcon} />
           <Link
             style={{
               boxShadow: 'none',
