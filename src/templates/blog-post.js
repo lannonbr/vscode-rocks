@@ -49,7 +49,19 @@ class BlogPostTemplate extends React.Component {
         <Helmet
           title={`${post.frontmatter.title} | ${siteTitle}`}
           link={[{ rel: 'shortcut icon', href: `${favicon}` }]}
-        />
+        >
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:creator" content="lannonbr" />
+          <meta
+            name="twitter:image"
+            content="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/512px-Visual_Studio_Code_1.18_icon.svg.png"
+          />
+          <meta
+            name="twitter:description"
+            content={this.props.data.markdownRemark.excerpt}
+          />
+          <meta name="twitter:title" content={post.frontmatter.title} />
+        </Helmet>
         <h1 style={{ textAlign: 'center' }}>{post.frontmatter.title}</h1>
         <time
           dateTime={dateTime}
@@ -88,6 +100,7 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
+      excerpt
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
