@@ -39,8 +39,14 @@ const PostPreviewContainer = styled.div`
     margin: 0 20px;
     flex-direction: column;
 
-    h2 {
-      margin-top: 20px;
+    a.viewmore {
+      font-size: 90%;
+      text-align: center;
+      display: block;
+    }
+
+    a:hover {
+      color: white;
     }
   }
 `
@@ -66,10 +72,12 @@ class PostPreview extends React.Component {
             </Link>
             <time dateTime={dateTime}>{this.props.post.frontmatter.date}</time>
             <p dangerouslySetInnerHTML={{ __html: this.props.post.excerpt }} />
-            <Link to={this.props.post.fields.slug}>View More</Link>
+            <Link className="viewmore" to={this.props.post.fields.slug}>
+              View More
+            </Link>
           </div>
         </PostPreviewContainer>
-        <hr style={{ color: '#777', marginTop: 20 }} />
+        <hr style={{ color: '#777', margin: '32px auto', width: '80%' }} />
       </article>
     )
   }
