@@ -1,5 +1,5 @@
 ---
-title: "#1: Grid Layouts, GitLens, and Quick File Traversal"
+title: "Weekly Digest #1: Grid Layouts, GitLens, and Quick File Traversal"
 date: "2018-08-19T17:00"
 image: "./vscode-grids.png"
 ---

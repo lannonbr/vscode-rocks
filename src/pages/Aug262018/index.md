@@ -1,5 +1,5 @@
 ---
-title: "#2: Upcoming Features in VS Code August 2018, Clock in Status Bar, and User Snippets"
+title: "Weekly Digest #2: Upcoming Features in VS Code August 2018, Clock in Status Bar, and User Snippets"
 date: "2018-08-26T1700"
 image: "./settings.png"
 ---
