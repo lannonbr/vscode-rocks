@@ -36,6 +36,14 @@ module.exports = {
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
           'gatsby-remark-emoji',
+          {
+            resolve: 'gatsby-plugin-google-analytics',
+            options: {
+              trackingId: 'UA-118790131-2',
+              anonymize: true,
+              respectDNT: true,
+            },
+          },
         ],
         excerpt_separator: `<!-- end -->`,
       },

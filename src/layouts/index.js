@@ -96,6 +96,14 @@ class Template extends React.Component {
       >
         {header}
         {children()}
+        <footer
+          style={{
+            fontSize: 14,
+            textAlign: 'center',
+          }}
+        >
+          &copy; 2018 Benjamin Lannon <Link to="/privacy">Privacy Policy</Link>
+        </footer>
       </div>
     )
   }
