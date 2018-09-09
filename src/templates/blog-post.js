@@ -50,6 +50,10 @@ class BlogPostTemplate extends React.Component {
           title={`${post.frontmatter.title} | ${siteTitle}`}
           link={[{ rel: 'shortcut icon', href: `${favicon}` }]}
         >
+          <meta
+            name="Description"
+            content={`${post.frontmatter.description}`}
+          />
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:creator" content="lannonbr" />
           <meta
@@ -104,6 +108,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        description
         image {
           childImageSharp {
             sizes(maxWidth: 2000) {

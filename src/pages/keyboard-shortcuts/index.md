@@ -1,6 +1,7 @@
 ---
 title: "Top keyboard shortcuts to remember in VS Code"
 date: "2018-09-02T1700"
+description: "List of good keyboard shortcuts to learn / remember in Visual Studio Code"
 image: "./shortcuts.png"
 ---
 

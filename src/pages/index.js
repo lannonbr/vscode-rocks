@@ -44,7 +44,9 @@ class BlogIndex extends React.Component {
         <Helmet
           title={siteTitle}
           link={[{ rel: 'shortcut icon', href: `${favicon}` }]}
-        />
+        >
+          <meta name="Description" content="Homepage for VS Code Rocks: A weekly blog on everything related to the Visual Studio Code text editor" />
+        </Helmet>
         <p className="topText">
           A place for weekly news on the newest features and updates to Visual
           Studio Code as well as trending extensions and neat tricks to

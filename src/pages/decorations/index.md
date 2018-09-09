@@ -1,6 +1,7 @@
 ---
 title: "VS Code Extension API: Decorations"
 date: "2018-09-09T1700"
+description: "Tutorial on how to add decorations into VS Code extensions"
 image: "./decorations.png"
 ---
 
