@@ -8,27 +8,25 @@ This week, I am going into how you can insert decorations into files with your e
 
 <!-- end -->
 
-# What are decorations? (Intro and History)
+# What are decorations?
 
-// TODO: Finish this
+The Decorations API was introduced to Visual Studio Code as a way to decorate pieces of code. It allows you to grab ranges of text in an editor and decorate it using a subset of CSS properties. It does not modify the code but rather gives a visual addition in VS Code to how you can interpret your code.
 
-Talk about a high level way of describing decorations and the capablities they have. List what you can decorate and what properties you can use to stylize the decorations.
-
-Pre-Code 1.0: Decorations API added.
-Code 1.3 (June 2016 release): Added `before` and `after` capablities.
+As well, in VS Code 1.3, they added support to use the ::before and ::after pseudoelements on these decorations through the API which is commonly seen in various extensions now in 2018.
 
 # Extensions that use decorations
 
-Decorations has been widely adopted across the extension community and here are a few extensions that show off what can be done with decorations:
+Decorations has been widely adopted across the extension community and here are a sample of extensions that show off what can be done with decorations:
 
 * [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens): Display git blame information for the current line
 * [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost): Displays size of modules when imported (and when imported while gzipped)
-* [Quokka.js](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode): Puts results of JS code inline
+* [Quokka.js](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode): Executes JS code and presents it inline
 * [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight): Decorate "TODO", "FIXME", and other specialized comments
-* [Colorize](https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-colorize): Color CSS colors inline
+* [Colorize](https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-colorize): stylizes CSS color strings inline
 * [Log File Highlighter](https://marketplace.visualstudio.com/items?itemName=emilast.LogFileHighlighter): Highlights log4net logfiles to make them more readable
+* [JS Parameter Annotations](https://marketplace.visualstudio.com/items?itemName=lannonbr.vscode-js-annotations) (Self plug, I wrote this extension): Decorates JS/TS function calls with parameter names
 
-# How to set decorations
+# How to create decorations
 
 To show off how to use the decorations, I am going to be writing an example extension that will highlight all locations of `console.log` in JS files
 
@@ -154,16 +152,14 @@ function decorate(editor: vscode.TextEditor) {
 }
 ```
 
-Now if you open the debugging menu or press `F5`, a debugging instance will open up. Open up a JS file that has a few console.log calls and press save and you should see the decorations in action:
+Now if you open the debugging menu and run the `Extension` launch configuration or press `F5`, a debugging instance of VS Code will open up. Open up a JS file that has a few console.log calls and press save and you should see the decorations in action:
 
 ![console.log's decorated](console-log.png)
 
-# Gotchas
+# Gotchas & Tips
 
-// TODO: Finish this
+Some things to know when using decorations. First, the decorationType object is very important when updating decorations. decoration type objects are used as the key for decorations so if you send a new array of ranges to be decorated, it will overwrite them. That said, if you call the `createTextEditorDecorationType` function every single time you want to insert decorations, it will treat each one as a new instance which can cause unexpected behavior down the road. to mitigate this, either store the type globally or as a member variable of a class.
 
-Some things to know when using decorations:
-
-Mention things that are gotchas (updating decorations, creating TextEditorDecorationTypes outside functions so the types stay consistent, etc)
+As well, do try to be efficient with updating decorations, as it could get computationally costly if updating decorations often if you are decorating the entire file rather than a single line or scope of code.
 
 That's it for this week. In a future post, I am going to discuss a sister-api to this, CodeLens, which adds actionable decorations above code lines
