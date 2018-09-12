@@ -22,6 +22,7 @@ Decorations has been widely adopted across the extension community and here are 
 * [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens): Display git blame information for the current line
 * [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost): Displays size of modules when imported (and when imported while gzipped)
 * [Quokka.js](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode): Executes JS code and presents it inline
+* [Wolf](https://marketplace.visualstudio.com/items?itemName=traBpUkciP.wolf): Executes Python code and presents it inline
 * [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight): Decorate "TODO", "FIXME", and other specialized comments
 * [Colorize](https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-colorize): stylizes CSS color strings inline
 * [Log File Highlighter](https://marketplace.visualstudio.com/items?itemName=emilast.LogFileHighlighter): Highlights log4net logfiles to make them more readable
