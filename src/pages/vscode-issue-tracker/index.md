@@ -35,13 +35,13 @@ If you haven't used GitHub's new API before, they have an API explorer where you
 
 With this API, I wrote a short serverless function which runs on AWS Lambda to grab the data from the Github API. I send a fetch request with the following GraphQL to the API to get the number of open issues:
 
-```
+```graphql
 query {
-    repository(owner: "Microsoft", name: "vscode") {
-        issues(states: OPEN) {
-            totalCount
-        }
+  repository(owner: "Microsoft", name: "vscode") {
+    issues(states: OPEN) {
+      totalCount
     }
+  }
 }
 ```
 
