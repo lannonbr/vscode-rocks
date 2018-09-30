@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Helmet from 'react-helmet'
 
 const AboutContainer = styled.div`
   margin: 0 150px;
@@ -12,6 +13,7 @@ class Privacy extends React.Component {
   render() {
     return (
       <AboutContainer>
+        <Helmet title={'Privacy Policy | VS Code Rocks'} />
         <h1>Privacy Policy</h1>
         <p>
           I respect the privacy of the users of this site and I make sure

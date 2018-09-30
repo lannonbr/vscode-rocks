@@ -2,6 +2,7 @@ import React from 'react'
 import get from 'lodash/get'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
+import Helmet from 'react-helmet'
 
 const ArchiveContainer = styled.div`
   margin: 0 150px;
@@ -17,6 +18,7 @@ class Archive extends React.Component {
 
     return (
       <ArchiveContainer>
+        <Helmet title={'Archive | VS Code Rocks'} />
         <h1 style={{ textAlign: 'center' }}>Archive</h1>
         <ul>
           {posts.map(({ node }) => {
