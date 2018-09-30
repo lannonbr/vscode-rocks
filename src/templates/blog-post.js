@@ -81,8 +81,11 @@ class BlogPostTemplate extends React.Component {
           className="topImg"
           sizes={post.frontmatter.image.childImageSharp.sizes}
         />
+        <h1>Table of Contents</h1>
+        <article dangerouslySetInnerHTML={{ __html: post.tableOfContents }} />
+        <hr />
         <article dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr style={{}} />
+        <hr />
         <p style={{ textAlign: 'center' }}>
           Stay tuned to the next issue, next Sunday
         </p>
@@ -105,6 +108,7 @@ export const pageQuery = graphql`
       id
       html
       excerpt
+      tableOfContents
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
