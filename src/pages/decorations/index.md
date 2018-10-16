@@ -1,6 +1,7 @@
 ---
 title: "VS Code Extension API: Decorations"
 date: "2018-09-09T1700"
+lastUpdated: "2018-10-15T2100"
 description: "Tutorial on how to add decorations into VS Code extensions"
 image: "./decorations.png"
 ---
@@ -19,14 +20,15 @@ As well, in VS Code 1.3, they added support to use the ::before and ::after pseu
 
 Decorations has been widely adopted across the extension community and here are a sample of extensions that show off what can be done with decorations:
 
-* [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens): Display git blame information for the current line
-* [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost): Displays size of modules when imported (and when imported while gzipped)
-* [Quokka.js](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode): Executes JS code and presents it inline
-* [Wolf](https://marketplace.visualstudio.com/items?itemName=traBpUkciP.wolf): Executes Python code and presents it inline
-* [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight): Decorate "TODO", "FIXME", and other specialized comments
-* [Colorize](https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-colorize): stylizes CSS color strings inline
-* [Log File Highlighter](https://marketplace.visualstudio.com/items?itemName=emilast.LogFileHighlighter): Highlights log4net logfiles to make them more readable
-* [JS Parameter Annotations](https://marketplace.visualstudio.com/items?itemName=lannonbr.vscode-js-annotations) (Self plug, I wrote this extension): Decorates JS/TS function calls with parameter names
+[GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+[Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)
+[Quokka.js](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode)
+[Wolf](https://marketplace.visualstudio.com/items?itemName=traBpUkciP.wolf)
+[TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)
+[Colorize](https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-colorize)
+[JS Parameter Annotations](https://marketplace.visualstudio.com/items?itemName=lannonbr.vscode-js-annotations)
+
+[Log File Highlighter](https://marketplace.visualstudio.com/items?itemName=emilast.LogFileHighlighter): Highlights log4net logfiles to make them more readable
 
 # How to create decorations
 
@@ -47,15 +49,15 @@ This describes how we want to style the decoration. For this example, I am going
 
 The following things can be styled which map to their respective css properties:
 
-* border
-* outline
-* color
-* backgroundColor,
-* fontSize
-* fontWeight
-* textDecoration
-* letterSpacing
-* opacity
+- border
+- outline
+- color
+- backgroundColor,
+- fontSize
+- fontWeight
+- textDecoration
+- letterSpacing
+- opacity
 
 As well, you can insert these into `light` and `dark` objects so you can customize how it will appear for specifically light or dark color themes.
 

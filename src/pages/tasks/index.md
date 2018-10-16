@@ -1,6 +1,7 @@
 ---
 title: "Task Running in VS Code"
 date: "2018-10-14T1500"
+lastUpdated: "2018-10-15T2100"
 description: "Overview of VS Code's builtin task runner"
 image: "./tasks.png"
 ---
@@ -9,7 +10,9 @@ The task runner in Visual Studio Code allows tasks to be run to interact with yo
 
 <!-- end -->
 
-(If you're interested with the theme I am using, it is [Shades of Purple](https://marketplace.visualstudio.com/items?itemName=ahmadawais.shades-of-purple) by [Ahmad Awais](https://github.com/ahmadawais))
+(If you're interested with the theme I am using, it is Shades of Purple by [Ahmad Awais](https://github.com/ahmadawais))
+
+[Shades of Purple](https://marketplace.visualstudio.com/items?itemName=ahmadawais.shades-of-purple)
 
 # Automating scripts for workflows
 

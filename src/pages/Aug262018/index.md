@@ -33,13 +33,17 @@ If you want to test these features or just dig into the nightly build of VS Code
 
 ![clock in status bar](Clock.png)
 
-[Clock in status bar](https://marketplace.visualstudio.com/items?itemName=Compulim.vscode-clock) is a clean addition to VS Code by adding just what it says: a digital clock into the status bar in the bottom right corner. If you click on it, it will copy the current time into the clipboard as it is presented on your statusbar. When working on MacOS and having the editor in full screen mode, having a clock on my screen without needing to move the mouse up to the menu bar brings a pleasant touch to daily development.
+Clock in status bar is a clean addition to VS Code by adding just what it says: a digital clock into the status bar in the bottom right corner. If you click on it, it will copy the current time into the clipboard as it is presented on your statusbar. When working on MacOS and having the editor in full screen mode, having a clock on my screen without needing to move the mouse up to the menu bar brings a pleasant touch to daily development.
+
+[Clock in status bar](https://marketplace.visualstudio.com/items?itemName=Compulim.vscode-clock)
 
 ---
 
 ![auto rename tag gif](AutoRenameTag.gif)
 
-The second extension we are looking at is [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag). It's an extremely simple yet powerful extension that has a single function of renaming matching tags in HTML or XML files. In practice it mainly just works other than some times where it grabs the incorrect closing tag. That said, it is a extension that is simplistic at design and doesn't add any bloat and it seems to act as if it was native to the editor as I have used it.
+The second extension we are looking at is Auto Rename Tag. It's an extremely simple yet powerful extension that has a single function of renaming matching tags in HTML or XML files. In practice it mainly just works other than some times where it grabs the incorrect closing tag. That said, it is a extension that is simplistic at design and doesn't add any bloat and it seems to act as if it was native to the editor as I have used it.
+
+[Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
 
 # Quick Tip: Writing User Snippets
 

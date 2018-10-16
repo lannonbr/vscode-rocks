@@ -5,6 +5,7 @@ import Img from 'gatsby-image'
 import styled from 'styled-components'
 import moment from 'moment'
 import favicon from '../favicon.ico'
+import 'gatsby-remark-vscode-embed/style.css'
 
 const BlogPostContainer = styled.div`
   margin: 0 80px;

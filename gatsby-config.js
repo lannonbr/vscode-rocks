@@ -45,6 +45,7 @@ module.exports = {
               respectDNT: true,
             },
           },
+          'gatsby-remark-vscode-embed',
         ],
         excerpt_separator: `<!-- end -->`,
       },
