@@ -9,7 +9,7 @@ const ArchiveContainer = styled.div`
   margin: 0 150px;
 
   li {
-    line-height: 1.75;
+    margin-bottom: 10px;
   }
 
   @media (max-width: 700px) {
