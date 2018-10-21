@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import profilePic from './profile.jpg'
 import Helmet from 'react-helmet'
+import Layout from '../components/layout'
 
 const AboutContainer = styled.div`
   margin: 0 150px;
@@ -41,49 +42,51 @@ const AuthorContainer = styled.div`
 class About extends React.Component {
   render() {
     return (
-      <AboutContainer>
-        <Helmet title={'About | VS Code Rocks'} />
-        <h1 style={{ textAlign: 'center' }}>About</h1>
-        <p>
-          Visual Studio Code has been around for over 2 years since the 1.0
-          release and the team has continually pushed for a cycle of pushing a
-          new update to the project one a month and bring features to
-          continually improve the editing experience.
-        </p>
-        <p>
-          VS Code Rocks will be a weekly updated site on things going on in VS
-          Code as well as ways to enhance your productivity through quick tips
-          and extensions.
-        </p>
-        <h1>About the Author</h1>
-        <AuthorContainer>
-          <img src={profilePic} alt="Profile Picture" />
-          <div>
-            <p>
-              I'm Benjamin Lannon. A Web Developer based in Upstate NY. As
-              someone who has become fairly advanced in learning about VS Code,
-              I wanted to create a blog to share my information that I know
-              about the editor to the developer community.
-            </p>
+      <Layout>
+        <AboutContainer>
+          <Helmet title={'About | VS Code Rocks'} />
+          <h1 style={{ textAlign: 'center' }}>About</h1>
+          <p>
+            Visual Studio Code has been around for over 2 years since the 1.0
+            release and the team has continually pushed for a cycle of pushing a
+            new update to the project one a month and bring features to
+            continually improve the editing experience.
+          </p>
+          <p>
+            VS Code Rocks will be a weekly updated site on things going on in VS
+            Code as well as ways to enhance your productivity through quick tips
+            and extensions.
+          </p>
+          <h1>About the Author</h1>
+          <AuthorContainer>
+            <img src={profilePic} alt="Benjamin Lannon portrait" />
+            <div>
+              <p>
+                I'm Benjamin Lannon. A Web Developer based in Upstate NY. As
+                someone who has become fairly advanced in learning about VS
+                Code, I wanted to create a blog to share my information that I
+                know about the editor to the developer community.
+              </p>
 
-            <p>
-              I've also written a couple of VS Code Extensions including{' '}
-              <a href="https://marketplace.visualstudio.com/items?itemName=lannonbr.vscode-js-annotations">
-                JS Parameter Annotations
-              </a>{' '}
-              and{' '}
-              <a href="https://marketplace.visualstudio.com/items?itemName=lannonbr.vscode-teddy-snippets">
-                Teddy Snippets
-              </a>
-            </p>
-            <p>
-              You can find me on{' '}
-              <a href="https://github.com/lannonbr">Github</a> and{' '}
-              <a href="https://twitter.com/lannonbr">Twitter</a>
-            </p>
-          </div>
-        </AuthorContainer>
-      </AboutContainer>
+              <p>
+                I've also written a couple of VS Code Extensions including{' '}
+                <a href="https://marketplace.visualstudio.com/items?itemName=lannonbr.vscode-js-annotations">
+                  JS Parameter Annotations
+                </a>{' '}
+                and{' '}
+                <a href="https://marketplace.visualstudio.com/items?itemName=lannonbr.vscode-teddy-snippets">
+                  Teddy Snippets
+                </a>
+              </p>
+              <p>
+                You can find me on{' '}
+                <a href="https://github.com/lannonbr">Github</a> and{' '}
+                <a href="https://twitter.com/lannonbr">Twitter</a>
+              </p>
+            </div>
+          </AuthorContainer>
+        </AboutContainer>
+      </Layout>
     )
   }
 }

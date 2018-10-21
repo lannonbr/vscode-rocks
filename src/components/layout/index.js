@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 import vscodeIcon from './vscode_icon.svg'
@@ -50,7 +50,7 @@ const Header = styled.header`
   }
 `
 
-class Template extends React.Component {
+class Layout extends React.Component {
   render() {
     const { children } = this.props
     let header = (
@@ -95,7 +95,7 @@ class Template extends React.Component {
         }}
       >
         {header}
-        {children()}
+        {children}
         <footer
           style={{
             fontSize: 14,
@@ -109,4 +109,4 @@ class Template extends React.Component {
   }
 }
 
-export default Template
+export default Layout

@@ -2,9 +2,10 @@ import React from 'react'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-import Link from 'gatsby-link'
+import { Link, graphql } from 'gatsby'
 import PostPreview from '../components/PostPreview'
 import favicon from '../favicon.ico'
+import Layout from '../components/layout'
 
 const BlogContainer = styled.div`
   p.topText {
@@ -40,31 +41,36 @@ class BlogIndex extends React.Component {
     const posts = get(this, 'props.data.allMarkdownRemark.edges').slice(0, 5) // Grab 5 newest posts
 
     return (
-      <BlogContainer>
-        <Helmet
-          title={siteTitle}
-          link={[{ rel: 'shortcut icon', href: `${favicon}` }]}
-        >
-          <meta name="Description" content="Homepage for VS Code Rocks: A weekly blog on everything related to the Visual Studio Code text editor" />
-        </Helmet>
-        <p className="topText">
-          A place for weekly news on the newest features and updates to Visual
-          Studio Code as well as trending extensions and neat tricks to
-          continually improve your VS Code skills.
-        </p>
-        <h2 className="thisMonth">New Posts</h2>
-        {posts.map(({ node }) => {
-          return <PostPreview key={node.fields.slug} post={node} />
-        })}
+      <Layout>
+        <BlogContainer>
+          <Helmet
+            title={siteTitle}
+            link={[{ rel: 'shortcut icon', href: `${favicon}` }]}
+          >
+            <meta
+              name="Description"
+              content="Homepage for VS Code Rocks: A weekly blog on everything related to the Visual Studio Code text editor"
+            />
+          </Helmet>
+          <p className="topText">
+            A place for weekly news on the newest features and updates to Visual
+            Studio Code as well as trending extensions and neat tricks to
+            continually improve your VS Code skills.
+          </p>
+          <h2 className="thisMonth">New Posts</h2>
+          {posts.map(({ node }) => {
+            return <PostPreview key={node.fields.slug} post={node} />
+          })}
 
-        <h2
-          style={{
-            textAlign: 'center',
-          }}
-        >
-          <Link to="/archive">Archive</Link>
-        </h2>
-      </BlogContainer>
+          <h2
+            style={{
+              textAlign: 'center',
+            }}
+          >
+            <Link to="/archive">Archive</Link>
+          </h2>
+        </BlogContainer>
+      </Layout>
     )
   }
 }
@@ -90,8 +96,8 @@ export const pageQuery = graphql`
             title
             image {
               childImageSharp {
-                sizes(maxWidth: 2000) {
-                  ...GatsbyImageSharpSizes
+                fluid(maxWidth: 2000) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }

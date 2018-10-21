@@ -1,6 +1,6 @@
 import React from 'react'
 import get from 'lodash/get'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import moment from 'moment'
@@ -63,7 +63,7 @@ class PostPreview extends React.Component {
           <Link className="prevImg" to={this.props.post.fields.slug}>
             <Img
               alt={title}
-              sizes={this.props.post.frontmatter.image.childImageSharp.sizes}
+              fluid={this.props.post.frontmatter.image.childImageSharp.fluid}
             />
           </Link>
           <div>

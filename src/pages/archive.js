@@ -1,8 +1,9 @@
 import React from 'react'
 import get from 'lodash/get'
-import Link from 'gatsby-link'
+import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 import Helmet from 'react-helmet'
+import Layout from '../components/layout'
 
 const ArchiveContainer = styled.div`
   margin: 0 150px;
@@ -17,21 +18,23 @@ class Archive extends React.Component {
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
 
     return (
-      <ArchiveContainer>
-        <Helmet title={'Archive | VS Code Rocks'} />
-        <h1 style={{ textAlign: 'center' }}>Archive</h1>
-        <ul>
-          {posts.map(({ node }) => {
-            return (
-              <li>
-                <Link to={node.fields.slug}>
-                  {node.frontmatter.title} - {node.frontmatter.date}
-                </Link>
-              </li>
-            )
-          })}
-        </ul>
-      </ArchiveContainer>
+      <Layout>
+        <ArchiveContainer>
+          <Helmet title={'Archive | VS Code Rocks'} />
+          <h1 style={{ textAlign: 'center' }}>Archive</h1>
+          <ul>
+            {posts.map(({ node }) => {
+              return (
+                <li key={node.fields.slug}>
+                  <Link to={node.fields.slug}>
+                    {node.frontmatter.title} - {node.frontmatter.date}
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+        </ArchiveContainer>
+      </Layout>
     )
   }
 }
