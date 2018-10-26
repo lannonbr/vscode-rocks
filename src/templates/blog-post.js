@@ -7,7 +7,8 @@ import moment from 'moment'
 import favicon from '../favicon.ico'
 import 'gatsby-remark-vscode-embed/style.css'
 import Layout from '../components/layout'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
+import _ from 'lodash'
 
 const BlogPostContainer = styled.div`
   margin: 0 80px;
@@ -89,6 +90,17 @@ class BlogPostTemplate extends React.Component {
           <article dangerouslySetInnerHTML={{ __html: post.tableOfContents }} />
           <hr />
           <article dangerouslySetInnerHTML={{ __html: post.html }} />
+          <div>
+            <b style={{ marginRight: 10 }}>Tags:</b>
+            {post.frontmatter.tags.map(tag => {
+
+              return (
+                <span style={{ marginRight: 10 }}>
+                  <Link to={`/tags/${_.kebabCase(tag)}`}>{tag}</Link>,
+                </span>
+              )
+            })}
+          </div>
           <hr />
           <p style={{ textAlign: 'center' }}>
             Stay tuned to the next issue, next Sunday
@@ -118,6 +130,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
         image {
           childImageSharp {
             fluid(maxWidth: 2000) {

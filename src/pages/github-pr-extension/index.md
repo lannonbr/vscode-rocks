@@ -3,6 +3,7 @@ title: "Integrating GitHub Pull Requests into VS Code"
 date: "2018-10-21T1200"
 description: "Overview of the GitHub pull requests extension for VS Code"
 image: "./githubpr.png"
+tags: ["extensions", "github"]
 ---
 
 Over the 2nd half of 2018, the GitHub and Microsoft teams have collaborated on an extension to integrate the PR workflow directly into VS Code. It brings the ability to manage PRs in the editor and simplifies the experience of reviewing pull requests. Today I am going to dig into the features it currently supports as well as some features that are coming soon to the extension.

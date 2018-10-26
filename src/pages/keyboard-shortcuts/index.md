@@ -3,6 +3,7 @@ title: "Top keyboard shortcuts to remember in VS Code"
 date: "2018-09-02T1700"
 description: "List of good keyboard shortcuts to learn / remember in Visual Studio Code"
 image: "./shortcuts.png"
+tags: ["tips", "workflow"]
 ---
 
 VS Code has many ways to control the editor through menus, the keyboard, panels in the sidebar, and many more. Today, I want to go into how you can control the majority if not all of your editor using the keyboard alone.

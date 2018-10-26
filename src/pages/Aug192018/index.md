@@ -3,6 +3,7 @@ title: "Weekly Digest #1: Grid Layouts, GitLens, and Quick File Traversal"
 date: "2018-08-19T17:00"
 description: "Weekly VS Code Digest for August 19, 2018"
 image: "./vscode-grids.png"
+tags: ["weekly digest", "extensions", "tips"]
 ---
 
 Welcome to the first issue of VS Code Rocks. Today we're going to look into the fairly recent addition of the grid layout. no more single split panes. As well, I take a look at the GitLens extension and show a few quick ways of quickly going through large codebases.

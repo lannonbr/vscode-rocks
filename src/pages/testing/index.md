@@ -3,6 +3,7 @@ title: "Testing your VS Code extensions"
 date: "2018-09-16T1700"
 description: "Tutorial on adding various forms of tests into VS Code Extensions"
 image: "./test.png"
+tags: ["testing", "extensions API"]
 ---
 
 As I've been developing extensions for VS Code, writing tests has become useful to make sure the extension is doing what it is supposed to. With VS Code, the environment supports capabilities from simple unit tests to full-blown e2e testing. I will cover my experience and some tricks to know when testing your extensions.
