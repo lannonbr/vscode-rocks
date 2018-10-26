@@ -3,6 +3,7 @@ title: "How I made the VS Code Issue Tracker"
 date: "2018-09-23T1700"
 description: "Article on how I made the VS Code issue tracker"
 image: "./tracker.png"
+tags: ["project", "github"]
 ---
 
 With the 1.28 release of VS Code, the team wished to clean up the issues on the Github Repo. There was over 5000 open issues and I decided to create a visualization to see the progress on cleaning up the open issues. This article goes into how I made this website using the JAMstack.

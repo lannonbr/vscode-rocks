@@ -3,6 +3,7 @@ title: "Debugging in VS Code"
 date: "2018-09-30T1700"
 description: "Overview of how to use the VS Code debugger"
 image: "./debug.png"
+tags: ["tips", "debugging", "workflow"]
 ---
 
 The debugger is one of the most powerful tools in a developer's toolchain. It encompasses you to pause in the middle of the execution and see the context of the program. VS Code has a fairly simple but powerful API that gives you the most amount of information with an intuitive interface. I will go through the basics on how to grasp using VS Code's Debugger.

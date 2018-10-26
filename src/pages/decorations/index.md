@@ -4,6 +4,7 @@ date: "2018-09-09T1700"
 lastUpdated: "2018-10-15T2100"
 description: "Tutorial on how to add decorations into VS Code extensions"
 image: "./decorations.png"
+tags: ["extensions API", "extensions"]
 ---
 
 This week, I am going into how you can insert decorations into files with your extenisons. Likely the most well known example that uses decorations is GitLens, but as I show, the interface isn't that difficult to learn.

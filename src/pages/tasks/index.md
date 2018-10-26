@@ -4,6 +4,7 @@ date: "2018-10-14T1500"
 lastUpdated: "2018-10-15T2100"
 description: "Overview of VS Code's builtin task runner"
 image: "./tasks.png"
+tags: ["workflow"]
 ---
 
 The task runner in Visual Studio Code allows tasks to be run to interact with your codebases. It has a huge benefit to run tasks without needing to switch over to a terminal to run a particular task. As well, VS Code supports NPM scripts by default in a variety of ways.
