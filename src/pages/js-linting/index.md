@@ -1,7 +1,7 @@
 ---
 title: "Linting JS & TS in VS Code"
 date: "2018-10-28T1800"
-description: "Overview of the GitHub pull requests extension for VS Code"
+description: "Overlook at some VS Code extensions to enable linting & code formatting for JS & TS."
 image: "./ts.png"
 tags: ["extensions", "linting", "code formatting"]
 ---
@@ -33,7 +33,7 @@ With that, lets dive into the 4 extensions.
 
 # ESLint
 
-ESLint is an extremely well known linter for JS developers. It has a set of rules to how code should be styled but the perks of it is it extremely customizable and extendable. If you don't like a rule or want to create a rule, it is as easy as downloading a plugin or adding something to a config file to change it.
+[ESLint](https://eslint.org/) is an extremely well known linter for JS developers. It has a set of rules to how code should be styled but the perks of it is it extremely customizable and extendable. If you don't like a rule or want to create a rule, it is as easy as downloading a plugin or adding something to a config file to change it.
 
 The VS Code Extension written by Dirk Baeumer integrates this into your editor. It will by default use the .eslintrc file to load in your config for ESLint and then will run it when you are editing files. When it picks up something wrong, it will insert some squiggly lines and add an entry to the Problems tab in the panel view.
 
