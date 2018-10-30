@@ -6,7 +6,7 @@ image: "./ts.png"
 tags: ["extensions", "linting", "code formatting"]
 ---
 
-Linters and Code Formatters set up a strict standard to stylize your code. It is useful when working in teams you don't have to disagree on topics like tabs vs spaces. There are a variety of code formatters / linters out there, but today I'm going to dive into 4 linters / code formatters for JavaScript & TypeScript that have extensions for Visual Studio Code.
+Linters and Code Formatters set up a strict standard to stylize your code. It is useful when working in teams so you don't have to disagree on topics like tabs vs spaces. There are a variety of code formatters / linters out there, but today I'm going to dive into 4 linters / code formatters for JavaScript & TypeScript that have extensions for Visual Studio Code.
 
 <!-- end -->
 
@@ -47,7 +47,7 @@ https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
 
 # Standard
 
-[JavaScript Standard Style](https://standardjs.com/) is another linter / formatter that is more opiniated compared to ESLint where it has a much smaller scope of [rules](https://standardjs.com/#standardjs--the-rules) that is bases itself on. the VS Code extension for it written by Sam Chen again, similar to the ESLint extension, will integrate Standard into VS Code. Compared to ESLint though, Standard just needs to be installed either in your node project locally or globally on your machine with `npm install standard` or `npm install -g standard` and does not require any config files to run.
+[JavaScript Standard Style](https://standardjs.com/) is another linter / formatter that is more opiniated compared to ESLint where it has a much smaller scope of [rules](https://standardjs.com/#standardjs--the-rules) that is bases itself on. The VS Code extension for it written by Sam Chen again, similar to the ESLint extension, will integrate Standard into VS Code. Compared to ESLint though, Standard just needs to be installed either in your node project locally or globally on your machine with `npm install standard` or `npm install -g standard` and does not require any config files to run.
 
 In essence, Standard has a different style compared to the default ESLint config, but all of the features of noting linting warnings or errors still exist with Standard. To download the extension, click the link below.
 
@@ -75,7 +75,7 @@ https://marketplace.visualstudio.com/items?itemName=eg2.tslint
 
 Although these tools do similar things, I would recommend against using them together by default. They sometimes can step over each due to precedence, so I would suggest if you want to use some of them together, try looking up documentation to see if they will work properly in the same workspace.
 
-As well, if you are working on a project that already has a particular code formatting / linting configuration already set up, do not use another linter / code formatter as it will cause issues down the road. Luckily, VS Code allows you to disable extensions for particular workspaces, so if you have a bunch of projects you use Prettier on, but one project uses ESLint with Standard, you can [disable the extension](https://code.visualstudio.com/docs/editor/extension-gallery#_disable-an-extension) for just that single project
+As well, if you are working on a project that already has a particular code formatting / linting configuration already set up, do not use another linter / code formatter as it will cause issues down the road. Luckily, VS Code allows you to disable extensions for particular workspaces, so if you have a bunch of projects you use Prettier on, but one project uses ESLint with Standard, you can [disable the extension](https://code.visualstudio.com/docs/editor/extension-gallery#_disable-an-extension) for just that single project.
 
 # Bonus: Don't commit without checking linting with Husky
 
