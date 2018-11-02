@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import Helmet from 'react-helmet'
 import Layout from '../components/layout'
+import SEOHelmet from '../components/SEOHelmet'
 
 const AboutContainer = styled.div`
   margin: 0 150px;
@@ -14,8 +14,12 @@ class Privacy extends React.Component {
   render() {
     return (
       <Layout>
+        <SEOHelmet
+          title={'Privacy Policy | VS Code Rocks'}
+          description={'VS Code Rocks Privacy Policy & Data Usage terms'}
+          cardDescription={'VS Code Rocks Privacy Policy & Data Usage terms'}
+        />
         <AboutContainer>
-          <Helmet title={'Privacy Policy | VS Code Rocks'} />
           <h1>Privacy Policy</h1>
           <p>
             I respect the privacy of the users of this site and I make sure

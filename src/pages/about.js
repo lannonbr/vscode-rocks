@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import profilePic from './profile.jpg'
-import Helmet from 'react-helmet'
+import SEOHelmet from '../components/SEOHelmet'
 import Layout from '../components/layout'
 
 const AboutContainer = styled.div`
@@ -43,8 +43,12 @@ class About extends React.Component {
   render() {
     return (
       <Layout>
+        <SEOHelmet
+          title={'About | VS Code Rocks'}
+          description={'VS Code Rocks About page'}
+          cardDescription={'VS Code Rocks About page'}
+        />
         <AboutContainer>
-          <Helmet title={'About | VS Code Rocks'} />
           <h1 style={{ textAlign: 'center' }}>About</h1>
           <p>
             Visual Studio Code has been around for over 2 years since the 1.0

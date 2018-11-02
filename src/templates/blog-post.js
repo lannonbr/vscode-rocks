@@ -1,14 +1,13 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 import get from 'lodash/get'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 import moment from 'moment'
-import favicon from '../favicon.ico'
 import 'gatsby-remark-vscode-embed/style.css'
 import Layout from '../components/layout'
 import { Link, graphql } from 'gatsby'
 import _ from 'lodash'
+import SEOHelmet from '../components/SEOHelmet'
 
 const BlogPostContainer = styled.div`
   margin: 0 80px;
@@ -50,27 +49,12 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout>
+        <SEOHelmet
+          title={`${post.frontmatter.title} | ${siteTitle}`}
+          description={post.frontmatter.description}
+          cardDescription={post.excerpt}
+        />
         <BlogPostContainer>
-          <Helmet
-            title={`${post.frontmatter.title} | ${siteTitle}`}
-            link={[{ rel: 'shortcut icon', href: `${favicon}` }]}
-          >
-            <meta
-              name="Description"
-              content={`${post.frontmatter.description}`}
-            />
-            <meta name="twitter:card" content="summary" />
-            <meta name="twitter:creator" content="lannonbr" />
-            <meta
-              name="twitter:image"
-              content="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/512px-Visual_Studio_Code_1.18_icon.svg.png"
-            />
-            <meta
-              name="twitter:description"
-              content={this.props.data.markdownRemark.excerpt}
-            />
-            <meta name="twitter:title" content={post.frontmatter.title} />
-          </Helmet>
           <h1 style={{ textAlign: 'center' }}>{post.frontmatter.title}</h1>
           <time
             dateTime={dateTime}

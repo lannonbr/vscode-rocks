@@ -1,11 +1,10 @@
 import React from 'react'
 import get from 'lodash/get'
-import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import { Link, graphql } from 'gatsby'
 import PostPreview from '../components/PostPreview'
-import favicon from '../favicon.ico'
 import Layout from '../components/layout'
+import SEOHelmet from '../components/SEOHelmet'
 
 const BlogContainer = styled.div`
   p.topText {
@@ -40,18 +39,17 @@ class BlogIndex extends React.Component {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allMarkdownRemark.edges').slice(0, 5) // Grab 5 newest posts
 
+    const description =
+      'Homepage for VS Code Rocks: A weekly blog on everything related to the Visual Studio Code text editor'
+
     return (
       <Layout>
+        <SEOHelmet
+          title={siteTitle}
+          description={description}
+          cardDescription={description}
+        />
         <BlogContainer>
-          <Helmet
-            title={siteTitle}
-            link={[{ rel: 'shortcut icon', href: `${favicon}` }]}
-          >
-            <meta
-              name="Description"
-              content="Homepage for VS Code Rocks: A weekly blog on everything related to the Visual Studio Code text editor"
-            />
-          </Helmet>
           <p className="topText">
             A place for weekly news on the newest features and updates to Visual
             Studio Code as well as trending extensions and neat tricks to

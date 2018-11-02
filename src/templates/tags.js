@@ -1,10 +1,9 @@
 import React from 'react'
-import Helmet from 'react-helmet'
-import favicon from '../favicon.ico'
 import Layout from '../components/layout'
 import { Link, graphql } from 'gatsby'
 import moment from 'moment'
 import styled from 'styled-components'
+import SEOHelmet from '../components/SEOHelmet'
 
 const TagContainer = styled.div`
   margin: 0 150px;
@@ -42,27 +41,12 @@ const Tags = ({ pageContext, data }) => {
 
   return (
     <Layout>
+      <SEOHelmet
+        title={`Tag: ${tag} | ${siteTitle}`}
+        description={`Posts with the ${tag} tag`}
+        cardDescription={`Posts with the ${tag} tag`}
+      />
       <TagContainer>
-        <Helmet
-          title={`Tag: ${tag} | ${siteTitle}`}
-          link={[{ rel: 'shortcut icon', href: `${favicon}` }]}
-        >
-          <meta
-            name="Description"
-            content={`Posts with the ${tag} tag`}
-          />
-          <meta name="twitter:card" content="summary" />
-          <meta name="twitter:creator" content="lannonbr" />
-          <meta
-            name="twitter:image"
-            content="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/512px-Visual_Studio_Code_1.18_icon.svg.png"
-          />
-          <meta
-            name="twitter:description"
-            content={`Posts with the ${tag} tag`}
-          />
-          <meta name="twitter:title" content={`Tag: ${tag} | ${siteTitle}`} />
-        </Helmet>
         <h1>{tagHeader}</h1>
         <ul>
           {edges.map(({ node }) => {
