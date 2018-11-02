@@ -4,6 +4,8 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 import moment from 'moment'
+import * as Icon from 'react-feather'
+import Flex from '../components/Flex'
 
 const PostPreviewContainer = styled.div`
   display: flex;
@@ -16,7 +18,8 @@ const PostPreviewContainer = styled.div`
   }
 
   time {
-    display: block;
+    display: flex;
+    align-items: center;
     margin-bottom: 30px;
   }
 
@@ -38,12 +41,6 @@ const PostPreviewContainer = styled.div`
   @media (max-width: 700px) {
     margin: 0 20px;
     flex-direction: column;
-
-    a.viewmore {
-      font-size: 90%;
-      text-align: center;
-      display: block;
-    }
 
     a:hover {
       color: white;
@@ -70,10 +67,18 @@ class PostPreview extends React.Component {
             <Link to={this.props.post.fields.slug}>
               <h2>{title}</h2>
             </Link>
-            <time dateTime={dateTime}>{this.props.post.frontmatter.date}</time>
+            <time dateTime={dateTime}>
+              <Flex alignCenter>
+                <Icon.Clock size={16} style={{ marginRight: 10 }} />
+                {this.props.post.frontmatter.date}
+              </Flex>
+            </time>
             <p dangerouslySetInnerHTML={{ __html: this.props.post.excerpt }} />
-            <Link className="viewmore" to={this.props.post.fields.slug}>
-              View More
+            <Link to={this.props.post.fields.slug}>
+              <Flex alignCenter>
+                View More
+                <Icon.ArrowRight style={{ marginLeft: 10 }} />
+              </Flex>
             </Link>
           </div>
         </PostPreviewContainer>

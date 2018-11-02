@@ -2,9 +2,11 @@ import React from 'react'
 import get from 'lodash/get'
 import styled from 'styled-components'
 import { Link, graphql } from 'gatsby'
+import * as Icon from 'react-feather'
 import PostPreview from '../components/PostPreview'
 import Layout from '../components/layout'
 import SEOHelmet from '../components/SEOHelmet'
+import Flex from '../components/Flex'
 
 const BlogContainer = styled.div`
   p.topText {
@@ -60,12 +62,13 @@ class BlogIndex extends React.Component {
             return <PostPreview key={node.fields.slug} post={node} />
           })}
 
-          <h2
-            style={{
-              textAlign: 'center',
-            }}
-          >
-            <Link to="/archive">Archive</Link>
+          <h2 style={{ textAlign: 'center' }}>
+            <Link to="/archive">
+              <Flex inline alignCenter>
+                <Icon.Archive style={{ marginRight: 10 }} />
+                Archive
+              </Flex>
+            </Link>
           </h2>
         </BlogContainer>
       </Layout>

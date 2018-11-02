@@ -8,6 +8,8 @@ import Layout from '../components/layout'
 import { Link, graphql } from 'gatsby'
 import _ from 'lodash'
 import SEOHelmet from '../components/SEOHelmet'
+import * as Icon from 'react-feather'
+import Flex from '../components/Flex'
 
 const BlogPostContainer = styled.div`
   margin: 0 80px;
@@ -74,7 +76,8 @@ class BlogPostTemplate extends React.Component {
           <article dangerouslySetInnerHTML={{ __html: post.tableOfContents }} />
           <hr />
           <article dangerouslySetInnerHTML={{ __html: post.html }} />
-          <div>
+          <Flex alignCenter>
+            <Icon.Tag size={16} style={{ marginRight: 5 }} />
             <b style={{ marginRight: 10 }}>Tags:</b>
             {post.frontmatter.tags.map(tag => {
 
@@ -84,7 +87,7 @@ class BlogPostTemplate extends React.Component {
                 </span>
               )
             })}
-          </div>
+          </Flex>
           <hr />
           <p style={{ textAlign: 'center' }}>
             Stay tuned to the next issue, next Sunday
