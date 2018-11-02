@@ -3,14 +3,7 @@ import styled from 'styled-components'
 import profilePic from './profile.jpg'
 import SEOHelmet from '../components/SEOHelmet'
 import Layout from '../components/layout'
-
-const AboutContainer = styled.div`
-  margin: 0 150px;
-
-  @media (max-width: 700px) {
-    margin: 0;
-  }
-`
+import Container from '../components/Container'
 
 const AuthorContainer = styled.div`
   display: grid;
@@ -48,8 +41,8 @@ class About extends React.Component {
           description={'VS Code Rocks About page'}
           cardDescription={'VS Code Rocks About page'}
         />
-        <AboutContainer>
-          <h1 style={{ textAlign: 'center' }}>About</h1>
+        <Container>
+          <h1>About VS Code Rocks</h1>
           <p>
             Visual Studio Code has been around for over 2 years since the 1.0
             release and the team has continually pushed for a cycle of pushing a
@@ -89,7 +82,7 @@ class About extends React.Component {
               </p>
             </div>
           </AuthorContainer>
-        </AboutContainer>
+        </Container>
       </Layout>
     )
   }

@@ -4,16 +4,11 @@ import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 import Layout from '../components/layout'
 import SEOHelmet from '../components/SEOHelmet';
+import Container from '../components/Container'
 
-const ArchiveContainer = styled.div`
-  margin: 0 150px;
-
+const ArchiveContainer = styled(Container)`
   li {
     margin-bottom: 10px;
-  }
-
-  @media (max-width: 700px) {
-    margin: 0;
   }
 `
 
@@ -29,7 +24,7 @@ class Archive extends React.Component {
           cardDescription={'All Posts on VS Code Rocks'}
         />
         <ArchiveContainer>
-          <h1 style={{ textAlign: 'center' }}>Archive</h1>
+          <h1>Archive</h1>
           <ul>
             {posts.map(({ node }) => {
               return (

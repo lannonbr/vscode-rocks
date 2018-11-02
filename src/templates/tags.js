@@ -4,32 +4,23 @@ import { Link, graphql } from 'gatsby'
 import moment from 'moment'
 import styled from 'styled-components'
 import SEOHelmet from '../components/SEOHelmet'
+import Container from '../components/Container'
 
-const TagContainer = styled.div`
-  margin: 0 150px;
-
+const TagContainer = styled(Container)`
   li {
     margin-bottom: 10px;
   }
+`
 
-  h1 {
-    text-align: center;
-  }
+const AllTagsLink = styled(Link)`
+  display: block;
+  text-align: center;
+  margin: 30px 0;
+  font-weight: 600;
+  text-decoration: none;
 
-  .all {
-    display: block;
-    text-align: center;
-    margin: 30px 0;
-    font-weight: 600;
-    text-decoration: none;
-  }
-
-  .all:hover {
+  &:hover {
     text-decoration: underline white;
-  }
-
-  @media (max-width: 700px) {
-    margin: 0;
   }
 `
 
@@ -60,7 +51,7 @@ const Tags = ({ pageContext, data }) => {
             )
           })}
         </ul>
-        <Link class="all" to="/tags">All Tags</Link>
+        <AllTagsLink to="/tags">All Tags</AllTagsLink>
       </TagContainer>
     </Layout>
   )

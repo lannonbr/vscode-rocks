@@ -4,20 +4,11 @@ import { Link, graphql } from 'gatsby'
 import _ from 'lodash'
 import styled from 'styled-components'
 import SEOHelmet from '../components/SEOHelmet'
+import Container from '../components/Container'
 
-const TagContainer = styled.div`
-  margin: 0 150px;
-
-  h1 {
-    text-align: center;
-  }
-
+const TagContainer = styled(Container)`
   li {
     margin-bottom: 10px;
-  }
-
-  @media (max-width: 700px) {
-    margin: 0;
   }
 `
 
