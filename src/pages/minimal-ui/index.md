@@ -1,6 +1,6 @@
 ---
 title: "Creating a windowed zen-mode in VS Code"
-date: "2018-11-04T1700"
+date: "2018-11-04T1530"
 description: "A quick way of minifying the UI of VS Code to just the editor"
 image: "./minui.png"
 tags: ["tips", "workflow", "extensions"]
