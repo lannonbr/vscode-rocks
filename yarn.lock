@@ -4723,9 +4723,10 @@ gatsby-remark-smartypants@^2.0.0:
     retext-smartypants "^3.0.0"
     unist-util-visit "^1.3.0"
 
-gatsby-remark-vscode-embed@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-vscode-embed/-/gatsby-remark-vscode-embed-1.0.1.tgz#90a5fdccbf330180133af841beaa561d02ea5e7f"
+gatsby-remark-vscode-embed@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-vscode-embed/-/gatsby-remark-vscode-embed-1.0.2.tgz#692da5d06feeb44da29e9f01ce97189182bcb676"
+  integrity sha512-LutScR9sK70dzTwaG1f9nlxQ9buSc3YZDeLJ66zwpXUWC7TEEjzGv6odDKFPMow0AmfWgisUiVBhIDr4yZqHiw==
   dependencies:
     async-unist-util-visit "^1.0.0"
     vsmarketplace-api "^1.0.0"

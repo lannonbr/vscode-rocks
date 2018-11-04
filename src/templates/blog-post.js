@@ -18,7 +18,7 @@ const BlogPostContainer = styled.div`
     line-height: 1.6;
   }
 
-  .vsmarketplace img.logo[src=""] {
+  .vsmarketplace-block img.logo[src=""] {
     display: none;
   }
 
