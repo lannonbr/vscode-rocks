@@ -18,6 +18,10 @@ const BlogPostContainer = styled.div`
     line-height: 1.6;
   }
 
+  .vsmarketplace-block img.logo[src=""] {
+    display: none;
+  }
+
   .topImg {
     margin: 0 100px;
   }
@@ -46,6 +50,7 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
+    const tags = post.frontmatter.tags
 
     const dateTime = moment(post.frontmatter.date).format('YYYY-MM-DD')
 
@@ -79,11 +84,11 @@ class BlogPostTemplate extends React.Component {
           <Flex alignCenter>
             <Icon.Tag size={16} style={{ marginRight: 5 }} />
             <b style={{ marginRight: 10 }}>Tags:</b>
-            {post.frontmatter.tags.map(tag => {
+            {tags.map((tag, idx) => {
 
               return (
                 <span style={{ marginRight: 10 }} key={tag}>
-                  <Link to={`/tags/${_.kebabCase(tag)}`}>{tag}</Link>,
+                  <Link to={`/tags/${_.kebabCase(tag)}`}>{tag}</Link>{idx === tags.length - 1 ? '' : ','}
                 </span>
               )
             })}
