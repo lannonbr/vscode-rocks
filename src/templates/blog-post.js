@@ -18,6 +18,10 @@ const BlogPostContainer = styled.div`
     line-height: 1.6;
   }
 
+  .vsmarketplace img.logo[src=""] {
+    display: none;
+  }
+
   .topImg {
     margin: 0 100px;
   }
