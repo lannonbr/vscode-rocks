@@ -22,7 +22,7 @@ A variety of UI components can be toggled through commands. Here is the main lis
 * View: Toggle Breadcrumbs
 * View: Toggle Panel
 
-You could go one by one and toggle them off if you prefer not to use them or want a minimal editor, but it would be extremely convienent if you could toggle many at once.
+You could go one by one and toggle them off if you prefer not to use them or want a minimal editor, but it would be extremely convenient if you could toggle many at once.
 
 # Multi-command VS Code Extension
 
@@ -34,13 +34,13 @@ With this, if you open the user settings JSON, you can use the `multiCommand.com
 
 ![multi-command entry](toggleCommand.png)
 
-I created a command called "lannonbr.toggleUI". Then I write the name of each command I want to run. If you do not know what the name of the command is, you can open the keyboard shortcuts view and if you search for the command, If you right click a command and click "Copy Command", it will copy the command string which is under the display name of the command to your clipboard.
+I created a command called "lannonbr.toggleUI". Then I write the name of each command I want to run. If you do not know what the name of the command is, you can open the keyboard shortcuts view and if you search for the command, right click on the command and click "Copy Command", it will copy the command string which is under the display name of the command to your clipboard.
 
 ![find command name](findCommandName.png)
 
 # Hide that UI
 
-Now that the command is made, we can setup a keybinding for it. Again in the keyboard shortcuts view, if you search for the command you made, you can click on it and set up a keybinding for it. I set my command to `cmd+k shift+z` (Since it provides a similar UI to the zen-mode which has a keybinding to `cmd+k z`)
+Now that the command is made, we can setup a keybinding for it. Again, in the keyboard shortcuts view, if you search for the command you made, you can click on it and set up a keybinding for it. I set my command to `cmd+k shift+z` (Since it provides a similar UI to the zen-mode which has a keybinding to `cmd+k z`)
 
 ![Toggle UI keybinding](toggleUIKeybinding.png)
 
@@ -48,4 +48,4 @@ Now if you press the keybinding, all of the various commands you set to run will
 
 Currently the multi-command extension doesn't add the command to the command palette, but the extension is on [GitHub](https://github.com/ryuta46/vscode-multi-command), so if someone would wish to investigate if they could add something like that, the maintainer is likely willing to take PRs.
 
-Overall, having the ability to push all of the UI out of the way can be extremely useful when doing a deep dive in your code or writing in VS Code, like how I do with this blog. As well, the multi-command feature would be a great addition into the main VS Code repository, but having an extension that implements it works anyways. It's a simple feature but can be extrapolated into a variety of more complex workflows.
+Overall, having the ability to push all of the UI out of the way can be extremely useful when doing a deep dive in your code or writing in VS Code, like how I do with this blog. As well, the multi-command feature would be a great addition into the main VS Code repository but having an extension that implements it works anyways. It's a simple feature but can be extrapolated into a variety of more complex workflows.
