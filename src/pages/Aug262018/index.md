@@ -4,7 +4,7 @@ date: "2018-08-26T1700"
 lastUpdated: "2018-10-15T2100"
 description: "Weekly VS Code Digest for August 26, 2018"
 image: "./settings.png"
-tags: ["weekly digest", "extensions", "release preview"]
+tags: ["weekly digest", "extensions", "release preview", "release highlights"]
 ---
 
 This week, I wanted to do a preview of what is upcoming in VS Code as well as some community spotlight and a quick tip. The endgame for VS Code August 2018 is starting tomorrow and with such, we are approaching a new update and let's take a look at what is going stable in the coming weeks.

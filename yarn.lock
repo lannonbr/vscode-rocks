@@ -4723,13 +4723,13 @@ gatsby-remark-smartypants@^2.0.0:
     retext-smartypants "^3.0.0"
     unist-util-visit "^1.3.0"
 
-gatsby-remark-vscode-embed@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-vscode-embed/-/gatsby-remark-vscode-embed-1.0.2.tgz#692da5d06feeb44da29e9f01ce97189182bcb676"
-  integrity sha512-LutScR9sK70dzTwaG1f9nlxQ9buSc3YZDeLJ66zwpXUWC7TEEjzGv6odDKFPMow0AmfWgisUiVBhIDr4yZqHiw==
+gatsby-remark-vscode-embed@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-vscode-embed/-/gatsby-remark-vscode-embed-1.0.3.tgz#341180273312314760615eb85d3d8737fd194368"
+  integrity sha512-RovirNpu0YO2O/CmAGBi4Hqjma7Wjf2h1J+p6YJ4BSyjG+xDRuZzMlXVLefa5c/R7Yv+DDwvYmuAWA3JDgmMDA==
   dependencies:
     async-unist-util-visit "^1.0.0"
-    vsmarketplace-api "^1.0.0"
+    vsmarketplace-api "^1.0.2"
 
 gatsby-source-filesystem@^2.0.0:
   version "2.0.5"
@@ -10839,9 +10839,10 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-vsmarketplace-api@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/vsmarketplace-api/-/vsmarketplace-api-1.0.0.tgz#18ef495c5225307c0e4e3e852de81f5c4fda3adb"
+vsmarketplace-api@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/vsmarketplace-api/-/vsmarketplace-api-1.0.2.tgz#0b997e183903746f4c49ed59a2878e89f2ba3553"
+  integrity sha512-rvUUQRf2Qzccdv0QFpUIUWtU2xKLXuP77ENWUTwcscz+p0Xr3UcCr16m9zOZxsLOhBEbscgmfA6+HLDelFvqtg==
   dependencies:
     node-fetch "^2.2.0"
 
