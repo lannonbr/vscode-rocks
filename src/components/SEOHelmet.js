@@ -18,7 +18,7 @@ export default class extends React.Component {
         <meta name="twitter:creator" content="lannonbr" />
         <meta name="twitter:image" content={vscodeLogo} />
         <meta name="twitter:description" content={cardDescription} />
-        <meta name="twitter.title" content={title} />
+        <meta name="twitter:title" content={title} />
       </Helmet>
     )
   }
