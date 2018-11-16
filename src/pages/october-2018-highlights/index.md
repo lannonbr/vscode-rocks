@@ -1,6 +1,7 @@
 ---
 title: "VS Code October 2018 Release Highlights"
 date: "2018-11-12T2000"
+lastUpdated: "2018-11-16T1230"
 description: "Highlights on a few of the new updates in the October 2018 release of VS Code"
 image: "./release.png"
 tags: ["release highlights"]
@@ -14,7 +15,7 @@ VS Code had its October Release today and with it came many new features. I want
 
 ![Unsaved Changes Indicator](unsaved.png)
 
-When you edit a file, the buffer is in a dirty state until you save. Before there was a circle in the tab indicating there are unsaved changes in a file. As of v1.29, there is now a colored top-border that will also indicate you have unsaved changes. It can be modified with the `tab.activeModifiedBorder` and related theme colors to match the style of your theme or pop out at you saying the file hasn’t been saved.
+When you edit a file, the buffer is in a dirty state until you save. Before there was a circle in the tab indicating there are unsaved changes in a file. As of v1.29, there is now a colored top-border that will also indicate you have unsaved changes. This can be enabled by setting `workbench.editor.highlightModifiedTabs` to true. If you want to change the color, it can be modified in the `workbench.colorCustomizations` setting under the `tab.activeModifiedBorder` property and related theme colors to match the style of your theme or pop out at you saying the file hasn’t been saved.
 
 Currently you can only change the color of the border. Overall it brings another visual cue that the file hasn’t been saved to disk and will be useful for some people in the future
 
