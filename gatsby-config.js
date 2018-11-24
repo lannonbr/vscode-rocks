@@ -24,6 +24,7 @@ module.exports = {
             options: {
               backgroundColor: '#333',
               maxWidth: 1000,
+              withWebp: true
             },
           },
           {
