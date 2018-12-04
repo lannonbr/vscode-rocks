@@ -1,12 +1,12 @@
 ---
 title: 'Automating VS Code Extensions with GitHub Actions'
-date: '2018-12-02T1900'
+date: '2018-12-03T2000'
 description: 'Overview on using GitHub actions to enhance the workflow of deploying VS Code Extensions'
 image: './actions-homepage.png'
 tags: ['extensions', 'github']
 ---
 
-GitHub Actions is the advancement of integrations into the GitHub API. It allows on over 20 GitHub events to run workflows that empower DevOps operations into most actions on GitHub. Today I want to go into what GitHub Actions can do and how I'll be using them to empower the deployment of my VS Code extensions.
+GitHub Actions is the advancement of integrations into the GitHub API. It allows on over 20 GitHub events to run workflows that empower and enhance GitHub workflows. Today I want to go into what GitHub Actions can do and how I'll be using them to empower the deployment of my VS Code extensions.
 
 <!-- end -->
 
@@ -75,7 +75,7 @@ With this, when writing actions, build them to be fairly simple so they can be p
 
 There are a few exceptions to the breadth of what you can do with Actions. You can create as many workflows you want in a repo, but you're limited to 2 workflows running simultaneously. As well, the workflows themselves have a limit of about a hour of runtime and can only hold 100 actions per workflow, which honestly for most scenarios will be alright.
 
-As well, you get an environment for each workflow so the actions can pass data between eachother. The resources for each are as follows:
+As well, you get an environment for each workflow, so the actions can pass data between each other. The resources for each are as follows:
 
 - 1 VCPU
 - 3.75GB of RAM
@@ -86,3 +86,5 @@ As well, you get an environment for each workflow so the actions can pass data b
 For the average consumer, that likely will be plenty, but in general, I would say Actions is another branch of the serverless world. One creates ephemeral containers that will run short-lived tasks based upon events from GitHub. It is a different mindset if you are not used to serverless, but the perks are you don't need to focus on the infrastructure that your code for these actions run, but rather just build the actions and let GitHub run them.
 
 Finally, GitHub Actions is still in a beta phase, so if you have access to it, you will only be able to implement workflows on private repos until actions hits General Availability. That said, do share actions you build on the [Awesome-Actions](https://github.com/sdras/awesome-actions) repo so when it goes public, developers will be able to see and use your actions.
+
+If you want to learn more, head over to the [GitHub Docs on Actions](https://developer.github.com/actions/). Otherwise, stay tuned next week.
