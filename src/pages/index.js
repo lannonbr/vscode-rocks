@@ -1,5 +1,4 @@
 import React from 'react'
-import get from 'lodash/get'
 import styled from 'styled-components'
 import { Link, graphql } from 'gatsby'
 import * as Icon from 'react-feather'
@@ -8,7 +7,7 @@ import Layout from '../components/layout'
 import SEOHelmet from '../components/SEOHelmet'
 import Flex from '../components/Flex'
 
-const BlogContainer = styled.div`
+const BlogContainer = styled.main`
   p.topText {
     text-align: center;
     font-size: 26px;
@@ -36,47 +35,43 @@ const BlogContainer = styled.div`
   }
 `
 
-class BlogIndex extends React.Component {
-  render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const posts = get(this, 'props.data.allMarkdownRemark.edges').slice(0, 5) // Grab 5 newest posts
+export default function BlogIndex(props) {
+  const siteTitle = props.data.site.siteMetadata.title
+  const posts = props.data.allMarkdownRemark.edges.slice(0, 5) // Grab 5 newest posts
 
-    const description =
-      'Homepage for VS Code Rocks: A weekly blog on everything related to the Visual Studio Code text editor'
+  const description =
+    'Homepage for VS Code Rocks: A weekly blog on everything related to the Visual Studio Code text editor'
 
-    return (
-      <Layout>
-        <SEOHelmet
-          title={siteTitle}
-          description={description}
-          cardDescription={description}
-        />
-        <BlogContainer>
-          <p className="topText">
-            A place for weekly news on the newest features and updates to Visual
-            Studio Code as well as trending extensions and neat tricks to
-            continually improve your VS Code skills.
-          </p>
-          <h2 className="thisMonth">New Posts</h2>
-          {posts.map(({ node }) => {
-            return <PostPreview key={node.fields.slug} post={node} />
-          })}
+  return (
+    <Layout>
+      <SEOHelmet
+        title={siteTitle}
+        description={description}
+        cardDescription={description}
+      />
+      <BlogContainer>
+        <p className="topText">
+          A place for weekly news on the newest features and updates to Visual
+          Studio Code as well as trending extensions and neat tricks to
+          continually improve your VS Code skills.
+        </p>
+        <h2 className="thisMonth">New Posts</h2>
+        {posts.map(({ node }) => {
+          return <PostPreview key={node.fields.slug} post={node} />
+        })}
 
-          <h2 style={{ textAlign: 'center' }}>
-            <Link to="/archive">
-              <Flex inline alignCenter>
-                <Icon.Archive style={{ marginRight: 10 }} />
-                Archive
-              </Flex>
-            </Link>
-          </h2>
-        </BlogContainer>
-      </Layout>
-    )
-  }
+        <h2 style={{ textAlign: 'center' }}>
+          <Link to="/archive">
+            <Flex inline alignCenter>
+              <Icon.Archive style={{ marginRight: 10 }} />
+              Archive
+            </Flex>
+          </Link>
+        </h2>
+      </BlogContainer>
+    </Layout>
+  )
 }
-
-export default BlogIndex
 
 export const pageQuery = graphql`
   query IndexQuery {

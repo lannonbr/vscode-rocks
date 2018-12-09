@@ -24,11 +24,13 @@ const AllTagsLink = styled(Link)`
   }
 `
 
-const Tags = ({ pageContext, data }) => {
+export default function Tags({ pageContext, data }) {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
   const siteTitle = data.site.siteMetadata.title
-  const tagHeader = `Tag: ${tag} (${totalCount} post${totalCount === 1 ? "" : "s"})`
+  const tagHeader = `Tag: ${tag} (${totalCount} post${
+    totalCount === 1 ? '' : 's'
+  })`
 
   return (
     <Layout>
@@ -46,7 +48,9 @@ const Tags = ({ pageContext, data }) => {
             const date = moment(node.frontmatter.date).format('ll')
             return (
               <li key={slug}>
-                <Link to={slug}>{title} - {date}</Link>
+                <Link to={slug}>
+                  {title} - {date}
+                </Link>
               </li>
             )
           })}
@@ -56,8 +60,6 @@ const Tags = ({ pageContext, data }) => {
     </Layout>
   )
 }
-
-export default Tags
 
 export const query = graphql`
   query($tag: String) {
@@ -69,7 +71,7 @@ export const query = graphql`
     allMarkdownRemark(
       limit: 500
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] }}}
+      filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
       totalCount
       edges {

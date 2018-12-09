@@ -1,5 +1,4 @@
 import React from 'react'
-import get from 'lodash/get'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
@@ -7,7 +6,7 @@ import moment from 'moment'
 import * as Icon from 'react-feather'
 import Flex from '../components/Flex'
 
-const PostPreviewContainer = styled.div`
+const PostPreviewContainer = styled.article`
   display: flex;
   align-items: center;
   margin: 0 80px;
@@ -48,44 +47,39 @@ const PostPreviewContainer = styled.div`
   }
 `
 
-class PostPreview extends React.Component {
-  render() {
-    const title = get(this.props.post, 'frontmatter.title')
+export default function PostPreview(props) {
+  const { title, date, image } = props.post.frontmatter
+  const { excerpt, fields } = props.post
 
-    let dateTime = moment(this.props.post.frontmatter.date).format('YYYY-MM-DD')
+  let dateTime = moment(date).format('YYYY-MM-DD')
+  let sizes = image.childImageSharp.fluid
 
-    return (
-      <article>
-        <PostPreviewContainer>
-          <Link className="prevImg" to={this.props.post.fields.slug}>
-            <Img
-              alt={title}
-              fluid={this.props.post.frontmatter.image.childImageSharp.fluid}
-            />
+  return (
+    <>
+      <PostPreviewContainer>
+        <Link className="prevImg" to={fields.slug}>
+          <Img alt={title} fluid={sizes} />
+        </Link>
+        <div>
+          <Link to={fields.slug}>
+            <h2>{title}</h2>
           </Link>
-          <div>
-            <Link to={this.props.post.fields.slug}>
-              <h2>{title}</h2>
-            </Link>
-            <time dateTime={dateTime}>
-              <Flex alignCenter>
-                <Icon.Clock size={16} style={{ marginRight: 10 }} />
-                {this.props.post.frontmatter.date}
-              </Flex>
-            </time>
-            <p dangerouslySetInnerHTML={{ __html: this.props.post.excerpt }} />
-            <Link to={this.props.post.fields.slug}>
-              <Flex alignCenter>
-                View More
-                <Icon.ArrowRight style={{ marginLeft: 10 }} />
-              </Flex>
-            </Link>
-          </div>
-        </PostPreviewContainer>
-        <hr style={{ color: '#777', margin: '32px auto', width: '80%' }} />
-      </article>
-    )
-  }
+          <time dateTime={dateTime}>
+            <Flex alignCenter>
+              <Icon.Clock size={16} style={{ marginRight: 10 }} />
+              {date}
+            </Flex>
+          </time>
+          <p dangerouslySetInnerHTML={{ __html: excerpt }} />
+          <Link to={fields.slug}>
+            <Flex alignCenter>
+              View More
+              <Icon.ArrowRight style={{ marginLeft: 10 }} />
+            </Flex>
+          </Link>
+        </div>
+      </PostPreviewContainer>
+      <hr style={{ color: '#777', margin: '32px auto', width: '80%' }} />
+    </>
+  )
 }
-
-export default PostPreview
