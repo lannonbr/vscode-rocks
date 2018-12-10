@@ -55,6 +55,9 @@ export default function BlogIndex(props) {
           Studio Code as well as trending extensions and neat tricks to
           continually improve your VS Code skills.
         </p>
+        <p className="topText" style={{ fontWeight: 'bold' }}>
+          Notice: New posts will return in January 2019
+        </p>
         <h2 className="thisMonth">New Posts</h2>
         {posts.map(({ node }) => {
           return <PostPreview key={node.fields.slug} post={node} />
