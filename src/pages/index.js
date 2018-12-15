@@ -13,6 +13,9 @@ const BlogContainer = styled.main`
     font-size: 26px;
     line-height: 1.4;
     padding: 0 40px;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   article:last-of-type {

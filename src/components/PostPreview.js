@@ -41,6 +41,12 @@ const PostPreviewContainer = styled.article`
     margin: 0 20px;
     flex-direction: column;
 
+    font-size: 18px;
+
+    h2 {
+      font-size: 24px;
+    }
+
     a:hover {
       color: white;
     }
@@ -70,7 +76,10 @@ export default function PostPreview(props) {
               {date}
             </Flex>
           </time>
-          <p dangerouslySetInnerHTML={{ __html: excerpt }} />
+          <p
+            style={{ lineHeight: '1.6' }}
+            dangerouslySetInnerHTML={{ __html: excerpt }}
+          />
           <Link to={fields.slug}>
             <Flex alignCenter>
               View More

@@ -13,8 +13,21 @@ import Flex from '../components/Flex'
 const BlogPostContainer = styled.main`
   margin: 0 80px;
 
-  p {
-    line-height: 1.6;
+  .content {
+    .gatsby-highlight,
+    img,
+    ul,
+    p,
+    h1 {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 75rem;
+    }
+
+    p,
+    li {
+      line-height: 1.6;
+    }
   }
 
   .vsmarketplace-block img.logo[src=''] {
@@ -37,7 +50,9 @@ const BlogPostContainer = styled.main`
   }
 
   @media (max-width: 700px) {
-    margin: 0 10px;
+    margin: 0 8px;
+
+    font-size: 18px;
 
     .topImg {
       margin: 0;
@@ -83,17 +98,26 @@ export default function(props) {
         </time>
         <Img alt="Blog post header image" className="topImg" fluid={sizes} />
         <h1>Table of Contents</h1>
-        <article dangerouslySetInnerHTML={{ __html: tableOfContents }} />
+        <article
+          className="toc"
+          dangerouslySetInnerHTML={{ __html: tableOfContents }}
+        />
         <hr />
-        <article dangerouslySetInnerHTML={{ __html: html }} />
-        <Flex alignCenter>
+        <article
+          className="content"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+        <Flex
+          alignCenter
+          style={{ maxWidth: '75rem', marginLeft: 'auto', marginRight: 'auto' }}
+        >
           <Icon.Tag size={16} style={{ marginRight: 5 }} />
           <b style={{ marginRight: 10 }}>Tags:</b>
           {tagsHtml}
         </Flex>
         <hr />
         <p style={{ textAlign: 'center' }}>
-          Stay tuned to the next issue, next Sunday
+          Stay tuned to the next issue, next Week
         </p>
       </BlogPostContainer>
     </Layout>
