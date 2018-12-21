@@ -45,7 +45,9 @@ export default function Tags({ pageContext, data }) {
           {edges.map(({ node }) => {
             const title = node.frontmatter.title
             const slug = node.fields.slug
-            const date = moment(node.frontmatter.date).format('ll')
+            const date = moment(node.frontmatter.date, 'MMMM DD, YYYY').format(
+              'll'
+            )
             return (
               <li key={slug}>
                 <Link to={slug}>

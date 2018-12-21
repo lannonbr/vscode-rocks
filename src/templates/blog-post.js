@@ -67,7 +67,7 @@ export default function(props) {
 
   const siteTitle = props.data.site.siteMetadata.title
   const sizes = post.frontmatter.image.childImageSharp.fluid
-  const dateTime = moment(date).format('YYYY-MM-DD')
+  const dateTime = moment(date, 'MMMM DD, YYYY').format('YYYY-MM-DD')
 
   const tagsHtml = post.frontmatter.tags.map((tag, idx, self) => {
     return (
