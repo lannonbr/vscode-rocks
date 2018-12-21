@@ -57,7 +57,7 @@ export default function PostPreview(props) {
   const { title, date, image } = props.post.frontmatter
   const { excerpt, fields } = props.post
 
-  let dateTime = moment(date).format('YYYY-MM-DD')
+  let dateTime = moment(date, 'MMMM DD, YY').format('YYYY-MM-DD')
   let sizes = image.childImageSharp.fluid
 
   return (
