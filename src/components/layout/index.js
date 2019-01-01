@@ -16,7 +16,7 @@ export default function Layout(props) {
           textAlign: 'center',
         }}
       >
-        &copy; 2018 Benjamin Lannon <Link to="/privacy">Privacy Policy</Link>
+        &copy; 2018 - 2019 Benjamin Lannon <Link to="/privacy">Privacy Policy</Link>
       </footer>
     </>
   )
