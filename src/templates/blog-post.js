@@ -39,7 +39,8 @@ const BlogPostContainer = styled.main`
       max-width: 100%;
     }
 
-    img[src$='.gif'] {
+    img[src$='.gif'],
+    img[src$='.svg'] {
       display: block;
       margin: 0 auto;
     }
