@@ -1,6 +1,6 @@
 ---
 title: 'Customizing Typography in VS Code'
-date: '2019-01-06T2000'
+date: '2019-01-06T1530'
 description: 'Overview on customizing fonts and other portions of the typography in VS Code'
 image: './typography.png'
 tags: ['workflow', 'UI']
