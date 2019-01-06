@@ -34,10 +34,6 @@ const BlogPostContainer = styled.main`
     display: none;
   }
 
-  .topImg {
-    margin: 0 100px;
-  }
-
   article {
     img {
       max-width: 100%;
@@ -53,21 +49,43 @@ const BlogPostContainer = styled.main`
     margin: 0 8px;
 
     font-size: 18px;
+  }
+`
 
-    .topImg {
-      margin: 0;
-    }
+const BlogPostHeader = styled.header`
+  display: flex;
+
+  p {
+    line-height: 1.6;
+  }
+
+  div {
+    flex: 1;
+  }
+
+  .topImg {
+    flex: 1.3;
+  }
+
+  .toc ul {
+    padding-left: 0;
+  }
+
+  @media (max-width: 700px) {
+    display: block;
   }
 `
 
 export default function(props) {
   const post = props.data.markdownRemark
-  const { excerpt, tableOfContents, html } = post
+  const { excerpt, tableOfContents, html, timeToRead } = post
   const { title, description, date } = post.frontmatter
 
   const siteTitle = props.data.site.siteMetadata.title
   const sizes = post.frontmatter.image.childImageSharp.fluid
   const dateTime = moment(date, 'MMMM DD, YYYY').format('YYYY-MM-DD')
+
+  let offset = html.indexOf('<!-- end -->') + 12
 
   const tagsHtml = post.frontmatter.tags.map((tag, idx, self) => {
     return (
@@ -86,26 +104,24 @@ export default function(props) {
         cardDescription={excerpt}
       />
       <BlogPostContainer>
-        <h1 style={{ textAlign: 'center' }}>{title}</h1>
-        <time
-          dateTime={dateTime}
-          style={{
-            display: 'block',
-            textAlign: 'center',
-          }}
-        >
-          {date}
-        </time>
-        <Img alt="Blog post header image" className="topImg" fluid={sizes} />
-        <h1>Table of Contents</h1>
-        <article
-          className="toc"
-          dangerouslySetInnerHTML={{ __html: tableOfContents }}
-        />
+        <BlogPostHeader>
+          <Img alt="Blog post header image" className="topImg" fluid={sizes} />
+          <div>
+            <h1>{title}</h1>
+            <time dateTime={dateTime}>{date}</time>
+            <span> - {timeToRead} minutes to read</span>
+            <p>{excerpt}</p>
+            <h1>Table of Contents</h1>
+            <article
+              className="toc"
+              dangerouslySetInnerHTML={{ __html: tableOfContents }}
+            />
+          </div>
+        </BlogPostHeader>
         <hr />
         <article
           className="content"
-          dangerouslySetInnerHTML={{ __html: html }}
+          dangerouslySetInnerHTML={{ __html: html.slice(offset) }}
         />
         <Flex
           alignCenter
@@ -136,6 +152,7 @@ export const pageQuery = graphql`
       id
       html
       excerpt
+      timeToRead
       tableOfContents
       frontmatter {
         title
