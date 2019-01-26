@@ -34,6 +34,11 @@ const BlogPostContainer = styled.main`
     display: none;
   }
 
+  .vsmarketplace-block .reviewSection {
+    display: flex;
+    align-items: center;
+  }
+
   article {
     img {
       max-width: 100%;
