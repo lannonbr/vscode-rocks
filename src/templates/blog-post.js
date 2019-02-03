@@ -71,6 +71,7 @@ const BlogPostHeader = styled.header`
 
   .topImg {
     flex: 1.3;
+    margin-right: 20px;
   }
 
   .toc ul {
@@ -79,6 +80,10 @@ const BlogPostHeader = styled.header`
 
   @media (max-width: 700px) {
     display: block;
+
+    .topImg {
+      margin-right: 0;
+    }
   }
 `
 

@@ -40,7 +40,7 @@ const BlogContainer = styled.main`
 
 export default function BlogIndex(props) {
   const siteTitle = props.data.site.siteMetadata.title
-  const posts = props.data.allMarkdownRemark.edges.slice(0, 5) // Grab 5 newest posts
+  const posts = props.data.allMarkdownRemark.edges
 
   const description =
     'Homepage for VS Code Rocks: A weekly blog on everything related to the Visual Studio Code text editor'
@@ -83,7 +83,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 5
+    ) {
       edges {
         node {
           excerpt
