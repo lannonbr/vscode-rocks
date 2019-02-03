@@ -27,6 +27,10 @@ const PostPreviewContainer = styled.article`
     flex: 1;
   }
 
+  a.prevImg {
+    margin-right: 20px;
+  }
+
   a {
     color: white;
     text-decoration: none;
