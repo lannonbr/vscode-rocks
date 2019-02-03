@@ -142,10 +142,6 @@ export default function(props) {
           <b style={{ marginRight: 10 }}>Tags:</b>
           {tagsHtml}
         </Flex>
-        <hr />
-        <p style={{ textAlign: 'center' }}>
-          Stay tuned to the next issue, next Week
-        </p>
       </BlogPostContainer>
     </Layout>
   )
