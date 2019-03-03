@@ -1,7 +1,7 @@
 ---
 title: "VS Code Extension API: Decorations"
 date: "2018-09-09T1700"
-lastUpdated: "2018-10-15T2100"
+lastUpdated: "2019-03-03T0900"
 description: "Tutorial on how to add decorations into VS Code extensions"
 image: "./decorations.png"
 tags: ["extensions API", "extensions"]
@@ -53,8 +53,7 @@ The following things can be styled which map to their respective css properties:
 - border
 - outline
 - color
-- backgroundColor,
-- fontSize
+- backgroundColor
 - fontWeight
 - textDecoration
 - letterSpacing
