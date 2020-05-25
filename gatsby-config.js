@@ -24,7 +24,7 @@ module.exports = {
             options: {
               backgroundColor: '#333',
               maxWidth: 1000,
-              withWebp: true
+              withWebp: true,
             },
           },
           {
@@ -50,11 +50,11 @@ module.exports = {
         respectDNT: true,
       },
     },
-    'gatsby-plugin-styled-components',
+    `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-feed`,
     `gatsby-plugin-react-helmet`,
-    'gatsby-plugin-offline'
+    `gatsby-plugin-offline`,
   ],
 }
